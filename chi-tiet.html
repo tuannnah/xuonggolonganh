@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bàn Ăn Di Sản Gỗ Gõ Đỏ – Chi Tiết Sản Phẩm | Xưởng Gỗ Long Anh</title>
+  <meta name="description" content="Bàn ăn Di Sản Gỗ Gõ Đỏ nguyên khối – tuyệt tác thủ công dành cho không gian sống đẳng cấp. Bảo hành 10 năm. Xưởng Gỗ Long Anh."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700&family=Noto+Serif:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="assets/shared.css"/>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#502905","primary-container": "#6b3f1a","secondary": "#875200",
+            "secondary-container": "#ffb865","surface": "#fdf9f4","surface-container-low": "#f7f3ee",
+            "surface-container": "#f1ede8","surface-container-high": "#ebe8e3",
+            "surface-container-lowest": "#ffffff","outline": "#84746a","outline-variant": "#d6c3b7",
+            "on-surface": "#1c1c19","on-surface-variant": "#51443b","on-primary": "#ffffff","on-secondary": "#ffffff",
+          },
+          fontFamily: { "headline": ["Noto Serif","serif"],"body": ["Be Vietnam Pro","sans-serif"] }
+        }
+      }
+    }
+  </script>
+  <style>
+    .thumb { cursor: pointer; overflow: hidden; border-radius: 6px; border: 2px solid transparent; transition: border-color 0.2s; }
+    .thumb.active { border-color: #875200; }
+    .thumb img { width:100%; height:100%; object-fit:cover; transition: transform 0.5s ease; }
+    .thumb:hover img { transform: scale(1.05); }
+    .main-img { transition: opacity 0.3s ease; }
+    /* Lightbox */
+    .lightbox { position:fixed;inset:0;background:rgba(0,0,0,0.92);z-index:300;display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity 0.3s; }
+    .lightbox.open { opacity:1; pointer-events:all; }
+    .lightbox img { max-width:90vw;max-height:90vh;object-fit:contain;border-radius:8px; }
+    .lightbox-close { position:absolute;top:1.5rem;right:1.5rem;background:none;border:none;color:white;cursor:pointer;font-size:2rem;opacity:0.8; }
+    .lightbox-close:hover { opacity:1; }
+    /* Spec table */
+    .spec-row { display:flex;justify-content:space-between;align-items:center;padding:0.75rem 0;border-bottom:1px solid rgba(214,195,183,0.2); }
+    .spec-row:last-child { border-bottom:none; }
+  </style>
+</head>
+<body>
+
+<div class="page-loader"><div class="loader-spinner"></div></div>
+
+<!-- Navigation -->
+<nav class="main-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand">Xưởng Gỗ Long Anh</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Trang chủ</a></li>
+      <li><a href="sofa.html">Sofa</a></li>
+      <li><a href="ban-ghe.html" class="active">Bàn ghế</a></li>
+      <li><a href="dich-vu.html">Dịch vụ</a></li>
+      <li><a href="lien-he.html">Liên hệ</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="lien-he.html" class="btn-consult">Liên hệ tư vấn</a>
+      <button class="hamburger" id="hamburger-btn"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+<div class="mobile-nav" id="mobile-nav">
+  <ul>
+    <li><a href="index.html">Trang chủ</a></li>
+    <li><a href="sofa.html">Sofa</a></li>
+    <li><a href="ban-ghe.html" class="active">Bàn ghế</a></li>
+    <li><a href="dich-vu.html">Dịch vụ</a></li>
+    <li><a href="lien-he.html">Liên hệ</a></li>
+  </ul>
+  <a href="lien-he.html" class="btn-consult">Liên hệ tư vấn ngay</a>
+</div>
+
+<!-- Main Content -->
+<main class="mt-[72px] pt-10 pb-24 bg-surface">
+  <div class="container">
+    <!-- Breadcrumb -->
+    <nav class="flex items-center gap-2 text-xs text-on-surface-variant/60 uppercase tracking-widest font-semibold mb-10">
+      <a href="index.html" class="hover:text-secondary transition-colors">Trang chủ</a>
+      <span class="material-symbols-outlined text-[10px]">chevron_right</span>
+      <a href="ban-ghe.html" class="hover:text-secondary transition-colors">Sản phẩm</a>
+      <span class="material-symbols-outlined text-[10px]">chevron_right</span>
+      <span style="color:#875200">Chi tiết sản phẩm</span>
+    </nav>
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-14 items-start">
+
+      <!-- LEFT: Gallery -->
+      <div class="lg:col-span-7 space-y-5 reveal">
+        <!-- Main Image -->
+        <div class="relative group overflow-hidden bg-surface-container-low aspect-[4/5] rounded-sm cursor-zoom-in" id="main-img-wrap" onclick="openLightbox()">
+          <img id="main-img" class="main-img w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNtxkbGohVDMl0JGb6-nN3KqK758f5VFlYJhM0FPIAYfNJ0CkBM8uaiwWwN9iTX9BxUFhoGei5ioswAEFnwijMkbLIS1h04BkXmnzCRyWLRPZuxGifT_v_9bYrSuL5Tp5DusoXn_FLv6gZR2aR9xr4-vnPGa16QgosN9Zz4Pu1gYQAejcIGHzsN51l92RXTueNdwior0zERIZxz-Q30vnvlGci-9whVj4MylMu2QesLu1Iv6cgJToj1ODwkcCkWouXfUHR84W7HhA"
+            alt="Bàn Ăn Di Sản Gỗ Gõ Đỏ – Xưởng Gỗ Long Anh"/>
+          <div class="absolute inset-0 bg-primary/5 pointer-events-none"></div>
+          <div class="absolute bottom-4 right-4 bg-black/40 text-white rounded-full p-2 opacity-0 group-hover:opacity-100 transition-opacity">
+            <span class="material-symbols-outlined text-xl">zoom_in</span>
+          </div>
+        </div>
+
+        <!-- Thumbnails -->
+        <div class="grid grid-cols-4 gap-3">
+          <div class="thumb active aspect-square" onclick="changeImg(this, 'https://lh3.googleusercontent.com/aida-public/AB6AXuBNtxkbGohVDMl0JGb6-nN3KqK758f5VFlYJhM0FPIAYfNJ0CkBM8uaiwWwN9iTX9BxUFhoGei5ioswAEFnwijMkbLIS1h04BkXmnzCRyWLRPZuxGifT_v_9bYrSuL5Tp5DusoXn_FLv6gZR2aR9xr4-vnPGa16QgosN9Zz4Pu1gYQAejcIGHzsN51l92RXTueNdwior0zERIZxz-Q30vnvlGci-9whVj4MylMu2QesLu1Iv6cgJToj1ODwkcCkWouXfUHR84W7HhA', 'Mặt bàn tổng thể')">
+            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNtxkbGohVDMl0JGb6-nN3KqK758f5VFlYJhM0FPIAYfNJ0CkBM8uaiwWwN9iTX9BxUFhoGei5ioswAEFnwijMkbLIS1h04BkXmnzCRyWLRPZuxGifT_v_9bYrSuL5Tp5DusoXn_FLv6gZR2aR9xr4-vnPGa16QgosN9Zz4Pu1gYQAejcIGHzsN51l92RXTueNdwior0zERIZxz-Q30vnvlGci-9whVj4MylMu2QesLu1Iv6cgJToj1ODwkcCkWouXfUHR84W7HhA" alt="Mặt bàn"/>
+          </div>
+          <div class="thumb aspect-square" onclick="changeImg(this, 'https://lh3.googleusercontent.com/aida-public/AB6AXuBWtXzIJCNW8ajJsy00r-P2XlN4aOHvB1NT2_uga9ZJjbvToIROwcTXbeMYxhYD05yhPpq2LY-sOZ5s1rvm0eqjNQ03_iRI7kR-rzUSJSwzNBpHDDsDQuMZifsP2X460pQEn9RRkjXSga-_JenUT2K71HdxHki866QHOMaMj4ZkjRLZZm9HK15Nd21hmcSbQ_EWBc75z5lg3f3wqzecCf3FEDtC4bhTRNCwEL6f3qMGGunf7eFIbwMbwywZYsxqHLJI8r_g6tksZ2Q', 'Chi tiết khớp nối')">
+            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWtXzIJCNW8ajJsy00r-P2XlN4aOHvB1NT2_uga9ZJjbvToIROwcTXbeMYxhYD05yhPpq2LY-sOZ5s1rvm0eqjNQ03_iRI7kR-rzUSJSwzNBpHDDsDQuMZifsP2X460pQEn9RRkjXSga-_JenUT2K71HdxHki866QHOMaMj4ZkjRLZZm9HK15Nd21hmcSbQ_EWBc75z5lg3f3wqzecCf3FEDtC4bhTRNCwEL6f3qMGGunf7eFIbwMbwywZYsxqHLJI8r_g6tksZ2Q" alt="Chi tiết"/>
+          </div>
+          <div class="thumb aspect-square" onclick="changeImg(this, 'https://lh3.googleusercontent.com/aida-public/AB6AXuDmQKbLos5O8Khq208WDXiPedJtqpflZNGF4Hc31-MeHbECjo82Qm8qc2xqDu4wrQDHskUkmHQx542dNJPPEAVg7NOe11XCnUohC37bULN5EqR4TuSm2Ht1STxGufmeLyFDfEe-XltIP4xm5eKsCToNeye4NkcFxE_ogvJncZItj62hFVJhWMAWHORrfj9S3HGeUqia4zDYyNWeb0uDjKZSxiMEbl99qVFjNB0KzRWHv0120JcDuKGxf5lglY6IFOTFEVbtaqCmPXU', 'Xưởng chế tác')">
+            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmQKbLos5O8Khq208WDXiPedJtqpflZNGF4Hc31-MeHbECjo82Qm8qc2xqDu4wrQDHskUkmHQx542dNJPPEAVg7NOe11XCnUohC37bULN5EqR4TuSm2Ht1STxGufmeLyFDfEe-XltIP4xm5eKsCToNeye4NkcFxE_ogvJncZItj62hFVJhWMAWHORrfj9S3HGeUqia4zDYyNWeb0uDjKZSxiMEbl99qVFjNB0KzRWHv0120JcDuKGxf5lglY6IFOTFEVbtaqCmPXU" alt="Xưởng"/>
+          </div>
+          <div class="thumb aspect-square" onclick="changeImg(this, 'https://lh3.googleusercontent.com/aida-public/AB6AXuAT3F65VbsyCSAyacZofHiIE43hk49KTkDU2TPDbhtxi0k0uuVabIAR_O5OZl_P7cTRUnxk9SUMgpmwWCmZ9mW42Iq4x_aQJxrgBB7XwZDog_GJx0wvFMojc4J76f43e0WA3dXNg2YWEAtsw6M3TfahsVgZBLT0CS2D4NEMZjNaKz3UsJX9AFU1g_zzoaLfL2JdOtaY1Jm6ZOUSdN968Rs8m7yx6XxzpnwArS79D-oJt9PO3Ypsi1XdXta2j48AwSdG4USmp4QBYxg', 'Mặt bàn đánh bóng')">
+            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAT3F65VbsyCSAyacZofHiIE43hk49KTkDU2TPDbhtxi0k0uuVabIAR_O5OZl_P7cTRUnxk9SUMgpmwWCmZ9mW42Iq4x_aQJxrgBB7XwZDog_GJx0wvFMojc4J76f43e0WA3dXNg2YWEAtsw6M3TfahsVgZBLT0CS2D4NEMZjNaKz3UsJX9AFU1g_zzoaLfL2JdOtaY1Jm6ZOUSdN968Rs8m7yx6XxzpnwArS79D-oJt9PO3Ypsi1XdXta2j48AwSdG4USmp4QBYxg" alt="Bề mặt"/>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: Product Info -->
+      <div class="lg:col-span-5 lg:sticky lg:top-32 space-y-10 reveal reveal-delay-2">
+
+        <div>
+          <div class="flex items-center gap-3 mb-5">
+            <span class="h-px w-10 bg-secondary"></span>
+            <p class="text-xs uppercase tracking-widest text-secondary font-bold">Kiệt Tác Thủ Công</p>
+          </div>
+          <h1 class="text-5xl font-bold text-primary leading-tight tracking-tight mb-6 font-headline">
+            Bàn Ăn Di Sản<br/>Gỗ Gõ Đỏ
+          </h1>
+          <p class="text-on-surface-variant leading-relaxed text-lg mb-8">
+            Được chế tác từ những khối gỗ Gõ Đỏ nguyên khối quý hiếm, mỗi sản phẩm tại Xưởng Gỗ Long Anh là một bản giao hưởng giữa thiên nhiên và bàn tay tài hoa của nghệ nhân.
+          </p>
+
+          <!-- Features -->
+          <div class="space-y-5 mb-10">
+            <div class="flex items-start gap-4">
+              <span class="material-symbols-outlined text-secondary mt-0.5" style="font-variation-settings:'FILL' 1">forest</span>
+              <div>
+                <h4 class="font-bold text-primary text-sm">Chất liệu tự nhiên</h4>
+                <p class="text-on-surface-variant text-sm">100% Gỗ Gõ Đỏ tự nhiên, tuyển chọn kỹ lưỡng về độ tuổi và vân gỗ.</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <span class="material-symbols-outlined text-secondary mt-0.5" style="font-variation-settings:'FILL' 1">handyman</span>
+              <div>
+                <h4 class="font-bold text-primary text-sm">Chế tác thủ công 12 bước</h4>
+                <p class="text-on-surface-variant text-sm">Quy trình xử lý gỗ 12 bước, hoàn thiện bằng lớp sơn lau organic an toàn.</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <span class="material-symbols-outlined text-secondary mt-0.5" style="font-variation-settings:'FILL' 1">verified</span>
+              <div>
+                <h4 class="font-bold text-primary text-sm">Bảo hành 10 năm</h4>
+                <p class="text-on-surface-variant text-sm">Bảo hành chống mối mọt, cong vênh lên đến 10 năm.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- CTAs -->
+          <div class="space-y-3">
+            <a href="lien-he.html" class="btn-primary w-full justify-center text-base py-4 tracking-wide">
+              <span class="material-symbols-outlined">chat_bubble</span>
+              LIÊN HỆ TƯ VẤN
+            </a>
+            <a href="dich-vu.html" class="btn-outline w-full justify-center text-base py-4">
+              Xem quy trình chế tác
+            </a>
+          </div>
+        </div>
+
+        <!-- Specs -->
+        <div class="bg-surface-container-low p-7 rounded-xl">
+          <h3 class="font-headline font-bold text-lg mb-5 text-primary">Thông số kỹ thuật</h3>
+          <dl>
+            <div class="spec-row"><dt class="text-on-surface-variant text-sm">Kích thước</dt><dd class="font-semibold text-primary text-sm">240 × 110 × 75 cm</dd></div>
+            <div class="spec-row"><dt class="text-on-surface-variant text-sm">Độ dày mặt bàn</dt><dd class="font-semibold text-primary text-sm">5 cm</dd></div>
+            <div class="spec-row"><dt class="text-on-surface-variant text-sm">Chất liệu</dt><dd class="font-semibold text-primary text-sm">Gỗ Gõ Đỏ nguyên khối</dd></div>
+            <div class="spec-row"><dt class="text-on-surface-variant text-sm">Hoàn thiện bề mặt</dt><dd class="font-semibold text-primary text-sm">Sơn lau Osmo Organic</dd></div>
+            <div class="spec-row"><dt class="text-on-surface-variant text-sm">Số người phục vụ</dt><dd class="font-semibold text-primary text-sm">8 – 10 người</dd></div>
+            <div class="spec-row"><dt class="text-on-surface-variant text-sm">Bảo hành</dt><dd class="font-semibold text-secondary text-sm">10 năm mối mọt</dd></div>
+            <div class="spec-row"><dt class="text-on-surface-variant text-sm">Thời gian sản xuất</dt><dd class="font-semibold text-primary text-sm">25 – 35 ngày</dd></div>
+          </dl>
+        </div>
+
+        <!-- Price inquiry -->
+        <div class="bg-secondary-container/20 rounded-xl p-6 flex items-center gap-4">
+          <span class="material-symbols-outlined text-secondary text-3xl" style="font-variation-settings:'FILL' 1">sell</span>
+          <div>
+            <div class="font-bold text-primary">Giá theo yêu cầu</div>
+            <div class="text-sm text-on-surface-variant">Liên hệ để nhận báo giá chính xác theo kích thước và chất liệu bạn chọn.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Related Products -->
+  <section class="py-20 bg-surface-container-low mt-20">
+    <div class="container">
+      <div class="flex items-center justify-between mb-10 reveal">
+        <h2 class="text-3xl font-bold text-primary font-headline">Sản phẩm liên quan</h2>
+        <a href="ban-ghe.html" class="text-secondary font-semibold flex items-center gap-1 hover:gap-3 transition-all">
+          Xem tất cả <span class="material-symbols-outlined">arrow_forward</span>
+        </a>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="product-card reveal reveal-delay-1">
+          <div class="product-card-img"><img alt="Bàn Ăn Gỗ Sồi" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBED3ZshTi8xa8vAoqkVbc3AQDJZ-oLJZWTncB3Y94EsC7jb9Z1IqfRPUeUs93I7UAj1dsgiGvTlUoRx97KdwpVGXZM7QY5_ESaUCTVk6cF2wNSdrDbYL9zlS7qH21NYgTYEgRUFi0yPs0hHhuB6PsYYJs73K1GZ3APEhRNXaForCBjQslwOTyB4Pnm_zf8J-yMn2OtOR6Ex08YUQnkj_ZSzSLNNBgZCgEWeVgS4Lklcb7Oh0iaXqlVMKNF24vWBYw8nb62-cHn0FA"/></div>
+          <div class="product-card-body"><div class="product-card-tag">Gỗ Sồi Nga</div><h3 class="product-card-title">Bàn Ăn Gỗ Sồi 4 Người</h3><p class="product-card-price">6,800,000đ</p><div class="product-card-actions"><button class="btn-card-detail" onclick="location.href='ban-ghe.html'">Xem thêm</button><button class="btn-card-contact" onclick="location.href='lien-he.html'">Liên hệ</button></div></div>
+        </div>
+        <div class="product-card reveal reveal-delay-2">
+          <div class="product-card-img"><img alt="Ghế Ăn Teak" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_DDGMwRzPWX1OJtMKb-h5tzZpObe8zJZKKThx9g6WQM3mIUCO6lcoX1R8aLPiMtPdfG-9f53qPAF71Xd1VphBYt5BmW7rZdEnQEZX_e8A1p1_u_3w_6B9lQtJ04b4hCP7X8XNE04r3X2AsKrc7t5VNRcOZVoro6eR6PY5YXFhbfQUgZnnWGGMkJEP3t0anngi8__0L-UGkYoBbU1w0Q4eXeyRTA6B3tvojhrKRWVu3HtXeaMVUzEtpn3QhDC3MOKJwfZqXVf9O2g"/></div>
+          <div class="product-card-body"><div class="product-card-tag">Gỗ Teak</div><h3 class="product-card-title">Ghế Ăn Gỗ Teak (bộ 4)</h3><p class="product-card-price">4,200,000đ</p><div class="product-card-actions"><button class="btn-card-detail" onclick="location.href='ban-ghe.html'">Xem thêm</button><button class="btn-card-contact" onclick="location.href='lien-he.html'">Liên hệ</button></div></div>
+        </div>
+        <div class="product-card reveal reveal-delay-3">
+          <div class="product-card-img"><img alt="Kệ TV Gỗ" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmW9PvouLGSIfEku3DAjw7KRhTw9Me6ut4-DKb4LQzpHjfFgcGta1M2wxgyHO6w_CtXx2JLaAirJV4jKvsQ3AR7ZkbUZesaoM2gVW2j6H93YeDlFaV2jouZ0aL7KZxRWSBcYzhU1bMH0xZXR2W_xvfKHKmj0mKw8jVHbD-_4MhCFWp51s-ws9gyQxsEEV7JeAmCdKbo5oWmrJ_5ujwHI58bW-_0SFsrqBTJ5k2H08bN0fi5psvu0T6cI23fcme-KRGYq6_LjPFaPg"/></div>
+          <div class="product-card-body"><div class="product-card-tag">Gỗ Tự Nhiên</div><h3 class="product-card-title">Kệ TV Gỗ Tự Nhiên</h3><p class="product-card-price">5,900,000đ</p><div class="product-card-actions"><button class="btn-card-detail" onclick="location.href='ban-ghe.html'">Xem thêm</button><button class="btn-card-contact" onclick="location.href='lien-he.html'">Liên hệ</button></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- Footer -->
+<footer class="main-footer">
+  <div class="footer-inner">
+    <div class="footer-brand"><h3>Xưởng Gỗ Long Anh</h3><p>Nội thất gỗ tự nhiên cao cấp – Gia công tại xưởng, bảo hành 5–10 năm.</p><div class="footer-socials mt-4"><a href="#"><span class="material-symbols-outlined text-sm">public</span></a><a href="#"><span style="font-size:13px;font-weight:700">Z</span></a></div></div>
+    <div class="footer-col"><h4>Sản phẩm</h4><ul><li><a href="sofa.html">Sofa gỗ</a></li><li><a href="ban-ghe.html">Bàn ăn</a></li><li><a href="ban-ghe.html">Kệ TV</a></li><li><a href="dich-vu.html">Theo yêu cầu</a></li></ul></div>
+    <div class="footer-col"><h4>Dịch vụ</h4><ul><li><a href="dich-vu.html">Tư vấn thiết kế</a></li><li><a href="dich-vu.html">Bảo hành & Bảo trì</a></li><li><a href="dich-vu.html">Vận chuyển & Lắp đặt</a></li></ul></div>
+    <div class="footer-col"><h4>Liên hệ</h4><div class="footer-contact-item"><span class="material-symbols-outlined">location_on</span>Giao Tác - Thư Lâm - Hà Nội</div><div class="footer-contact-item"><span class="material-symbols-outlined">call</span>0353 135 887 / 0971 212 706</div></div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2024 <strong>Xưởng Gỗ Long Anh</strong>. Đẳng cấp nghệ nhân Việt.</p>
+  </div>
+</footer>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <button class="lightbox-close" onclick="closeLightbox()">
+    <span class="material-symbols-outlined text-3xl">close</span>
+  </button>
+  <img id="lightbox-img" src="" alt=""/>
+</div>
+
+<div class="fab-container">
+  <a href="tel:0353135887" class="fab-btn fab-phone"><span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">call</span></a>
+  <a href="https://zalo.me/0353135887" target="_blank" class="fab-btn fab-zalo">Z</a>
+  <button class="fab-btn fab-top" id="fab-top"><span class="material-symbols-outlined">keyboard_arrow_up</span></button>
+</div>
+
+<script src="assets/shared.js"></script>
+<script>
+  document.getElementById('hamburger-btn').addEventListener('click', function() {
+    this.classList.toggle('open');
+    document.getElementById('mobile-nav').classList.toggle('open');
+  });
+
+  function changeImg(thumb, src, alt) {
+    document.querySelectorAll('.thumb').forEach(t => t.classList.remove('active'));
+    thumb.classList.add('active');
+    const mainImg = document.getElementById('main-img');
+    mainImg.style.opacity = '0';
+    setTimeout(() => {
+      mainImg.src = src;
+      mainImg.alt = alt || '';
+      mainImg.style.opacity = '1';
+    }, 280);
+    document.getElementById('lightbox-img').src = src;
+  }
+
+  function openLightbox() {
+    const src = document.getElementById('main-img').src;
+    document.getElementById('lightbox-img').src = src;
+    document.getElementById('lightbox').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLightbox() {
+    document.getElementById('lightbox').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+</script>
+</body>
+</html>
