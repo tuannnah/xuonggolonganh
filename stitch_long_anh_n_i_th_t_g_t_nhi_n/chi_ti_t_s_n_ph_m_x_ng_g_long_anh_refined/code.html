@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+
+<html class="light" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&amp;family=Be+Vietnam+Pro:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Be Vietnam Pro', sans-serif;
+            background-color: #fdf9f4;
+            color: #1c1c19;
+        }
+        .font-notoSerif { font-family: 'Noto Serif', serif; }
+        .font-beVietnamPro { font-family: 'Be Vietnam Pro', sans-serif; }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "tertiary": "#003940",
+                        "on-surface": "#1c1c19",
+                        "surface-container-high": "#ebe8e3",
+                        "secondary": "#875200",
+                        "background": "#fdf9f4",
+                        "inverse-on-surface": "#f4f0eb",
+                        "inverse-surface": "#31302d",
+                        "surface-variant": "#e6e2dd",
+                        "secondary-fixed-dim": "#ffb865",
+                        "on-surface-variant": "#51443b",
+                        "on-primary-container": "#eaac7e",
+                        "on-secondary-fixed": "#2b1700",
+                        "on-error": "#ffffff",
+                        "tertiary-container": "#05525b",
+                        "outline": "#84746a",
+                        "inverse-primary": "#f9b98a",
+                        "surface-tint": "#83532c",
+                        "secondary-fixed": "#ffddba",
+                        "on-error-container": "#93000a",
+                        "error-container": "#ffdad6",
+                        "surface": "#fdf9f4",
+                        "on-tertiary-fixed": "#001f24",
+                        "on-primary-fixed": "#2f1400",
+                        "on-background": "#1c1c19",
+                        "primary-container": "#6b3f1a",
+                        "on-primary": "#ffffff",
+                        "surface-dim": "#ddd9d5",
+                        "on-secondary-container": "#774800",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "tertiary-fixed-dim": "#93d0db",
+                        "tertiary-fixed": "#afedf7",
+                        "surface-container": "#f1ede8",
+                        "on-secondary-fixed-variant": "#663d00",
+                        "on-tertiary-fixed-variant": "#004f58",
+                        "surface-container-highest": "#e6e2dd",
+                        "outline-variant": "#d6c3b7",
+                        "secondary-container": "#ffb865",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-container": "#87c3ce",
+                        "primary-fixed": "#ffdcc4",
+                        "error": "#ba1a1a",
+                        "surface-container-low": "#f7f3ee",
+                        "surface-bright": "#fdf9f4",
+                        "primary": "#502905",
+                        "on-primary-fixed-variant": "#683c17",
+                        "primary-fixed-dim": "#f9b98a",
+                        "nav-bg": "#f7f2eb" /* Subtle tonal shift from #fdf9f4 */
+                    },
+                    fontFamily: {
+                        "headline": ["Noto Serif"],
+                        "body": ["Be Vietnam Pro"],
+                        "label": ["Be Vietnam Pro"]
+                    },
+                    borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background selection:bg-secondary/20">
+<nav class="fixed top-0 w-full z-50 bg-nav-bg/90 backdrop-blur-md border-b border-surface-variant/30">
+<div class="flex justify-between items-center w-full px-8 py-6 max-w-7xl mx-auto">
+<div class="text-2xl font-bold text-[#502905] font-['Noto_Serif']">
+                Xưởng Gỗ Long Anh
+            </div>
+<div class="hidden md:flex items-center space-x-8">
+<div class="flex space-x-8">
+<a class="text-[#875200] border-b border-[#875200] pb-1 font-['Noto_Serif'] font-semibold tracking-tight text-sm" href="#">Trang chủ</a>
+<a class="text-[#502905] hover:text-[#875200] transition-colors duration-300 font-['Noto_Serif'] font-semibold tracking-tight text-sm" href="#">Sofa</a>
+<a class="text-[#502905] hover:text-[#875200] transition-colors duration-300 font-['Noto_Serif'] font-semibold tracking-tight text-sm" href="#">Bàn ghế</a>
+<a class="text-[#502905] hover:text-[#875200] transition-colors duration-300 font-['Noto_Serif'] font-semibold tracking-tight text-sm" href="#">Dịch Vụ</a>
+<a class="text-[#502905] hover:text-[#875200] transition-colors duration-300 font-['Noto_Serif'] font-semibold tracking-tight text-sm" href="#">Liên hệ</a>
+</div>
+<div class="flex items-center ml-8">
+<button class="text-[#502905] hover:text-[#875200] transition-all duration-300 active:opacity-80 active:scale-95">
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+</button>
+</div>
+</div>
+<div class="md:hidden">
+<span class="material-symbols-outlined text-[#502905]">menu</span>
+</div>
+</div>
+</nav>
+<main class="pt-32 pb-24 px-6 md:px-12 max-w-7xl mx-auto">
+<div class="mb-12 flex items-center space-x-2 text-xs uppercase tracking-[0.2em] text-on-surface-variant/60 font-medium">
+<a class="hover:text-secondary transition-colors" href="#">Trang chủ</a>
+<span class="material-symbols-outlined text-[10px]">chevron_right</span>
+<a class="hover:text-secondary transition-colors" href="#">Sản Phẩm</a>
+<span class="material-symbols-outlined text-[10px]">chevron_right</span>
+<span class="text-secondary">Chi Tiết Sản Phẩm</span>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+<div class="lg:col-span-7 space-y-8">
+<div class="relative group overflow-hidden bg-surface-container-low aspect-[4/5] rounded-sm">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="high-end handcrafted solid wood dining table with natural grain patterns in a sunlit minimalist atelier setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNtxkbGohVDMl0JGb6-nN3KqK758f5VFlYJhM0FPIAYfNJ0CkBM8uaiwWwN9iTX9BxUFhoGei5ioswAEFnwijMkbLIS1h04BkXmnzCRyWLRPZuxGifT_v_9bYrSuL5Tp5DusoXn_FLv6gZR2aR9xr4-vnPGa16QgosN9Zz4Pu1gYQAejcIGHzsN51l92RXTueNdwior0zERIZxz-Q30vnvlGci-9whVj4MylMu2QesLu1Iv6cgJToj1ODwkcCkWouXfUHR84W7HhA"/>
+<div class="absolute inset-0 bg-primary/5 pointer-events-none"></div>
+</div>
+<div class="grid grid-cols-2 gap-8">
+<div class="aspect-square bg-surface-container-low overflow-hidden rounded-sm group">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="macro close-up of intricate hand-carved joinery on a dark walnut furniture piece highlighting artisan craftsmanship" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWtXzIJCNW8ajJsy00r-P2XlN4aOHvB1NT2_uga9ZJjbvToIROwcTXbeMYxhYD05yhPpq2LY-sOZ5s1rvm0eqjNQ03_iRI7kR-rzUSJSwzNBpHDDsDQuMZifsP2X460pQEn9RRkjXSga-_JenUT2K71HdxHki866QHOMaMj4ZkjRLZZm9HK15Nd21hmcSbQ_EWBc75z5lg3f3wqzecCf3FEDtC4bhTRNCwEL6f3qMGGunf7eFIbwMbwywZYsxqHLJI8r_g6tksZ2Q"/>
+</div>
+<div class="aspect-square bg-surface-container-low overflow-hidden rounded-sm group mt-12">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="smooth polished surface of a premium wood console table reflecting soft ambient morning light in a luxury home" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAT3F65VbsyCSAyacZofHiIE43hk49KTkDU2TPDbhtxi0k0uuVabIAR_O5OZl_P7cTRUnxk9SUMgpmwWCmZ9mW42Iq4x_aQJxrgBB7XwZDog_GJx0wvFMojc4J76f43e0WA3dXNg2YWEAtsw6M3TfahsVgZBLT0CS2D4NEMZjNaKz3UsJX9AFU1g_zzoaLfL2JdOtaY1Jm6ZOUSdN968Rs8m7yx6XxzpnwArS79D-oJt9PO3Ypsi1XdXta2j48AwSdG4USmp4QBYxg"/>
+</div>
+</div>
+<div class="grid grid-cols-12 gap-8">
+<div class="col-span-8 aspect-[16/10] bg-surface-container-low overflow-hidden rounded-sm group">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="wide shot of a handcrafted wooden bed frame in a master bedroom with neutral tones and organic textures" src="https://lh3.googleusercontent.com/aida-public/AB6AXuArbXjl12VXo4RgUuc9qBSYH3WZMY5zXY29n5jvKJ6qz_sDA5F8N1MEB0Ok-TnnZKissPLZGEueEagEdxq61NsbGx0KvB_ZqDgcJIwSbBxCT638Elb8EQsbmTEmgSCvgmMfaaLV2bw8diBFrQhFnCsF4_IBPBZFXeawe9N8tpUhwAqgYufaSyLbLCOryNw_5Ik7ZlwuPgIq0DPhC8UHILFGUENkjmbJbP2QfKj86bDfWu6xv34ptj7aaH6FzXV2Z48o9bCqLdanw1Q"/>
+</div>
+<div class="col-span-4 aspect-[3/4] bg-surface-container-low overflow-hidden rounded-sm group">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="vertical detail shot of high-quality timber grain showing the rich reddish-brown hues of natural wood" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAF8ECTNmft5bSKjw9olQV73PhJ157ap7vt9BRb-F0p828CRwrfSjFiCXz2pL-PnIH-0ZMD3k9n-BvLCWIs3F8Z0hxPFKeOuyzIUOXrqJTEW9F1YiPN-jojA2w2P3_8vWP8Un064M6X4yKuYDVY6VLsfNLnN0HfSY24wQPCJ617FvCd5TkQjGPIIKlFG5oKh8Fd2CtbBpLGNzM2_DXeHMl4OP0AEYhRCF58qaaIfpMWxCBF1R9co3ke4derljhbiVpfkCuf8eKQv8M"/>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-8">
+<div class="aspect-video bg-surface-container-low overflow-hidden rounded-sm group">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="artisan woodworker tools resting on a workbench beside a partially finished sculpture of premium oak" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmQKbLos5O8Khq208WDXiPedJtqpflZNGF4Hc31-MeHbECjo82Qm8qc2xqDu4wrQDHskUkmHQx542dNJPPEAVg7NOe11XCnUohC37bULN5EqR4TuSm2Ht1STxGufmeLyFDfEe-XltIP4xm5eKsCToNeye4NkcFxE_ogvJncZItj62hFVJhWMAWHORrfj9S3HGeUqia4zDYyNWeb0uDjKZSxiMEbl99qVFjNB0KzRWHv0120JcDuKGxf5lglY6IFOTFEVbtaqCmPXU"/>
+</div>
+<div class="aspect-video bg-surface-container-low overflow-hidden rounded-sm group">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="minimalist wooden chair with elegant curves standing in a bright gallery space with long shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvZYQwlVbGdgXEvn_p5pgpJ8bNdmJiXjLZV5F_ePj7uGOcfzAw_F-xWrkKo5ba6n9HFSsTLIz72xPpbTfmBfEpHYDMVi0pvT61NjZ0Su8K6kHmyRW2vEoQx-XC-_cW5I4MZbILukpmaldo7mkpiiD7FQnoYDeoqgFafoy4VUfc7VIANd3ukcdamyvC179LWqKh5V7bgOAvJcys1zf7nut66Wlk7ByKNANafH_Xe9gLkpFnq1BIHxYZhAtoZKcPANAecwdx6i62fI4"/>
+</div>
+</div>
+</div>
+<div class="lg:col-span-5 lg:sticky lg:top-32 space-y-12">
+<section>
+<h1 class="text-5xl md:text-6xl font-notoSerif font-bold text-primary leading-tight tracking-tight mb-6">
+                        Bàn Ăn Di Sản <br/>Gỗ Gõ Đỏ
+                    </h1>
+<div class="flex items-center space-x-4 mb-8">
+<span class="h-[1px] w-12 bg-secondary"></span>
+<p class="font-beVietnamPro text-sm uppercase tracking-widest text-secondary font-bold">Kiệt Tác Thủ Công</p>
+</div>
+<p class="font-beVietnamPro text-lg leading-relaxed text-on-surface-variant/80 mb-10">
+                        Được chế tác từ những khối gỗ Gõ Đỏ nguyên khối quý hiếm, mỗi sản phẩm tại Xưởng Gỗ Long Anh là một bản giao hưởng giữa thiên nhiên và bàn tay tài hoa của nghệ nhân. Chúng tôi tôn vinh những đường vân tự nhiên, giữ trọn linh hồn của đại ngàn trong từng món đồ nội thất.
+                    </p>
+<div class="space-y-6">
+<div class="flex items-start space-x-4">
+<span class="material-symbols-outlined text-secondary mt-1" data-icon="forest">forest</span>
+<div>
+<h4 class="font-bold text-primary font-beVietnamPro">Chất liệu tự nhiên</h4>
+<p class="text-sm text-on-surface-variant">100% Gỗ Gõ Đỏ tự nhiên, được tuyển chọn kỹ lưỡng về độ tuổi và vân gỗ.</p>
+</div>
+</div>
+<div class="flex items-start space-x-4">
+<span class="material-symbols-outlined text-secondary mt-1" data-icon="handyman">handyman</span>
+<div>
+<h4 class="font-bold text-primary font-beVietnamPro">Chế tác thủ công</h4>
+<p class="text-sm text-on-surface-variant">Quy trình xử lý gỗ 12 bước, hoàn thiện bằng lớp sơn lau organic an toàn.</p>
+</div>
+</div>
+</div>
+</section>
+<div class="pt-8 space-y-4">
+<button class="w-full bg-primary text-on-primary py-5 rounded-lg font-beVietnamPro font-bold tracking-wide hover:bg-primary/95 transition-all shadow-xl shadow-primary/10 flex justify-center items-center space-x-3">
+<span class="material-symbols-outlined text-xl" data-icon="chat_bubble">chat_bubble</span>
+<span>LIÊN HỆ TƯ VẤN</span>
+</button>
+<button class="w-full border border-outline-variant/30 text-primary py-5 rounded-lg font-beVietnamPro font-medium hover:bg-surface-container-low transition-all">
+                        Xem quy trình chế tác
+                    </button>
+</div>
+<div class="bg-surface-container-low p-8 rounded-sm">
+<h3 class="font-notoSerif font-bold text-xl mb-4 text-primary">Thông số kỹ thuật</h3>
+<dl class="space-y-4 text-sm font-beVietnamPro">
+<div class="flex justify-between border-b border-outline-variant/10 pb-2">
+<dt class="text-on-surface-variant">Kích thước</dt>
+<dd class="font-semibold text-primary">240 x 110 x 75 cm</dd>
+</div>
+<div class="flex justify-between border-b border-outline-variant/10 pb-2">
+<dt class="text-on-surface-variant">Độ dày mặt bàn</dt>
+<dd class="font-semibold text-primary">5 cm</dd>
+</div>
+<div class="flex justify-between border-b border-outline-variant/10 pb-2">
+<dt class="text-on-surface-variant">Bảo hành</dt>
+<dd class="font-semibold text-primary">10 năm mối mọt</dd>
+</div>
+</dl>
+</div>
+</div>
+</div>
+</main>
+<footer class="w-full bg-nav-bg border-t border-surface-variant/30">
+<div class="max-w-7xl mx-auto px-8 py-6 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+<div class="text-sm font-['Noto_Serif'] text-primary font-bold">
+                Xưởng Gỗ Long Anh
+            </div>
+<div class="text-xs text-on-surface-variant/70 font-beVietnamPro">
+                © 2024 Xưởng Gỗ Long Anh. Đẳng cấp nghệ nhân Việt.
+            </div>
+<div class="flex space-x-6 text-xs font-beVietnamPro font-medium text-primary">
+<a class="hover:text-secondary transition-colors" href="#">Về chúng tôi</a>
+<a class="hover:text-secondary transition-colors" href="#">Chính sách bảo hành</a>
+<a class="hover:text-secondary transition-colors" href="#">Liên hệ</a>
+</div>
+</div>
+</footer>
+</body></html>

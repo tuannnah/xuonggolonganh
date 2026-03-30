@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sofa Gỗ Tự Nhiên | Xưởng Gỗ Long Anh – Nội Thất Cao Cấp</title>
+  <meta name="description" content="Bộ sưu tập sofa gỗ tự nhiên: Sofa 2 chỗ, 3 chỗ, sofa góc L. Gia công tại xưởng, bảo hành 5 năm, thiết kế theo yêu cầu."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700&family=Noto+Serif:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="assets/shared.css"/>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#502905","primary-container": "#6b3f1a","secondary": "#875200",
+            "secondary-container": "#ffb865","surface": "#fdf9f4","surface-container-low": "#f7f3ee",
+            "surface-container": "#f1ede8","surface-container-high": "#ebe8e3",
+            "surface-container-lowest": "#ffffff","outline": "#84746a","outline-variant": "#d6c3b7",
+            "on-surface": "#1c1c19","on-surface-variant": "#51443b","on-primary": "#ffffff","on-secondary": "#ffffff",
+          },
+          fontFamily: { "headline": ["Noto Serif","serif"],"body": ["Be Vietnam Pro","sans-serif"] }
+        }
+      }
+    }
+  </script>
+  <style>
+    .filter-btn { transition: all 0.25s ease; }
+    .filter-btn.active { background: #875200; color: white; border-color: #875200; }
+    .product-item { transition: opacity 0.4s ease, transform 0.4s ease; }
+    .product-item.hidden-item { opacity: 0; transform: scale(0.95); pointer-events: none; position: absolute; }
+    .product-grid { position: relative; }
+    .sticky-filter { position: sticky; top: 72px; z-index: 40; }
+  </style>
+</head>
+<body>
+
+<div class="page-loader"><div class="loader-spinner"></div></div>
+
+<!-- Navigation -->
+<nav class="main-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand">Xưởng Gỗ Long Anh</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Trang chủ</a></li>
+      <li><a href="sofa.html" class="active">Sofa</a></li>
+      <li><a href="ban-ghe.html">Bàn ghế</a></li>
+      <li><a href="dich-vu.html">Dịch vụ</a></li>
+      <li><a href="lien-he.html">Liên hệ</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="lien-he.html" class="btn-consult">Liên hệ tư vấn</a>
+      <button class="hamburger" id="hamburger-btn"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+<div class="mobile-nav" id="mobile-nav">
+  <ul>
+    <li><a href="index.html">Trang chủ</a></li>
+    <li><a href="sofa.html" class="active">Sofa</a></li>
+    <li><a href="ban-ghe.html">Bàn ghế</a></li>
+    <li><a href="dich-vu.html">Dịch vụ</a></li>
+    <li><a href="lien-he.html">Liên hệ</a></li>
+  </ul>
+  <a href="lien-he.html" class="btn-consult">Liên hệ tư vấn ngay</a>
+</div>
+
+<!-- Page Hero -->
+<section class="mt-[72px] relative py-28 md:py-36 overflow-hidden">
+  <div class="absolute inset-0">
+    <img
+      src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhMT_pDau3HLkNyOsXeCB3d6aqPUEOphbSTiZgzmH6QFnxdw6nt4OE7pBMlSw9FZ51vnnJ3V9ptIwC8w4-m6ZV5Kc3YsvuhIPre564qxORcLckOyL-pYY4W58GWo56jzQHpGh1538yWfWtInS1MuB1AaP_5mRbseq-St-rwW4PvbzCCLZk5ofwkJSGcvwB5ijgS2YEP-ozyo9RIa0EnP4F2WU7yMUIaSxIW5kKiyxEGycePEEJ2hRLrAvqPqJmpizC6vms-63VjzA"
+      alt="" class="w-full h-full object-cover" style="filter:brightness(0.3)"/>
+  </div>
+  <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(80,41,5,0.92) 0%, rgba(107,63,26,0.7) 100%)"></div>
+  <div class="container relative z-10">
+    <!-- Breadcrumb -->
+    <nav class="flex items-center gap-2 text-xs opacity-70 mb-6 text-white" style="font-family:'Be Vietnam Pro',sans-serif;">
+      <a href="index.html" class="hover:opacity-100">Trang chủ</a>
+      <span class="material-symbols-outlined text-[10px]">chevron_right</span>
+      <span style="color:#ffb865">Sofa</span>
+    </nav>
+    <div class="max-w-2xl">
+      <span class="section-label" style="color:#ffb865">Bộ sưu tập</span>
+      <h1 class="text-5xl md:text-6xl font-bold text-white mb-5 leading-tight tracking-tight">
+        Sofa Gỗ Tự Nhiên
+      </h1>
+      <p class="text-lg text-white/80 leading-relaxed">
+        Khám phá bộ sưu tập sofa gỗ cao cấp, gia công tại xưởng với tinh hoa từ đôi bàn tay nghệ nhân Việt. Mỗi chiếc sofa là một tuyệt tác bền đẹp theo thời gian.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Filter Bar (sticky) -->
+<section class="sticky-filter bg-surface-container-low py-5 border-b border-outline-variant/20">
+  <div class="container">
+    <div class="flex flex-wrap items-center gap-3">
+      <button class="filter-btn active px-5 py-2 rounded-full text-sm font-semibold border border-secondary bg-secondary text-white" data-filter="all">Tất cả</button>
+      <button class="filter-btn px-5 py-2 rounded-full text-sm font-semibold border border-outline-variant text-on-surface-variant hover:border-secondary hover:text-secondary" data-filter="2cho">Sofa 2 chỗ</button>
+      <button class="filter-btn px-5 py-2 rounded-full text-sm font-semibold border border-outline-variant text-on-surface-variant hover:border-secondary hover:text-secondary" data-filter="3cho">Sofa 3 chỗ</button>
+      <button class="filter-btn px-5 py-2 rounded-full text-sm font-semibold border border-outline-variant text-on-surface-variant hover:border-secondary hover:text-secondary" data-filter="gocL">Sofa góc L</button>
+      <button class="filter-btn px-5 py-2 rounded-full text-sm font-semibold border border-outline-variant text-on-surface-variant hover:border-secondary hover:text-secondary" data-filter="custom">Theo yêu cầu</button>
+    </div>
+  </div>
+</section>
+
+<!-- Product Grid -->
+<section class="py-16 bg-surface">
+  <div class="container">
+    <div class="product-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10" id="sofa-grid">
+
+      <!-- Product 1 -->
+      <div class="product-item reveal reveal-delay-1" data-category="2cho">
+        <div class="product-card">
+          <div class="product-card-img">
+            <img alt="Sofa Gỗ Sồi 2 Chỗ"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFVmnxAyYLvkSWc7JLkvmL8ETCXb8XXokkqoOsS-4PZv4ygbv2T9m6d42GiZ0tp6o_F2mDtSRb5qgHtrdamtWUAJIqyMiV73jelsB8Cgm76E55w94FxDLEGAO0g2NMPRoFqxeGMFMsY0q83bD87JzM5rL-F0Myc0x91CyzjbUE69nMFtkK4FEMOhOkh3c9yj6fSF1obPPkfnU0lJ4o8M5HCMoMreqPPk_n07TH6UF5BIG4Zv6gwpupdOYt53CGscoglfymxIRNzsY"/>
+          </div>
+          <div class="product-card-body">
+            <div class="product-card-tag">Gỗ Sồi Nga · Sofa 2 chỗ</div>
+            <h2 class="product-card-title">Sofa Gỗ Sồi 2 Chỗ</h2>
+            <p class="text-sm text-on-surface-variant mb-2">Chất liệu: Gỗ sồi tự nhiên nhập khẩu. Đệm mút cao su thiên nhiên.</p>
+            <p class="product-card-price">8,500,000đ</p>
+            <div class="product-card-actions">
+              <button class="btn-card-detail" onclick="window.location.href='chi-tiet.html'">Xem chi tiết</button>
+              <button class="btn-card-contact" onclick="window.location.href='lien-he.html'">Liên hệ</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 2 -->
+      <div class="product-item reveal reveal-delay-2" data-category="3cho">
+        <div class="product-card">
+          <div class="product-card-img">
+            <img alt="Sofa Gỗ Sồi 3 Chỗ"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7Rcl2HMHldGowo2bdk5jTwL38_-_uy9x8sKaJW-4jfcQ7GPNNB0UkL5-gfPpHXnT2UyGWD-I4lOHOpjZ2rAl8Ku9yTarLLVp_DSeu8Jh-O3VomK4eVQvOHGquKvd-2Sq-g_7Z4mreEeJwN7tFKhC8C_fdJlxC708jTrFeZ2JKOhXzcRmJ3ZEVY0lera_hWiwWJtOr9HYjW5c5lkdcjHI-YgO2sRGAUHTm3bgG4CyzNKdy-zG84irl7GvuZifVHnHZZu6LhLlyP0M"/>
+          </div>
+          <div class="product-card-body">
+            <div class="product-card-tag">Gỗ Sồi Nga · Sofa 3 chỗ</div>
+            <h2 class="product-card-title">Sofa Gỗ Sồi 3 Chỗ</h2>
+            <p class="text-sm text-on-surface-variant mb-2">Khung gỗ sồi xử lý 12 bước. Đệm lò xo chống võng.</p>
+            <p class="product-card-price">12,500,000đ</p>
+            <div class="product-card-actions">
+              <button class="btn-card-detail" onclick="window.location.href='chi-tiet.html'">Xem chi tiết</button>
+              <button class="btn-card-contact" onclick="window.location.href='lien-he.html'">Liên hệ</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 3 -->
+      <div class="product-item reveal reveal-delay-3" data-category="gocL">
+        <div class="product-card">
+          <div class="product-card-img">
+            <img alt="Sofa Góc L Gỗ Teak"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0IusrJJtzzA38s6wEqBAUUyYeFJl7C6Ty45hgDkErxujqgbIERHFuwzGqYtXyhJ_XPVW9tfK_B3B604YVCVft15kbW8cUrsuCh8cbQ3DOY64asqSFpL7FC-Ij_P2ZOuZDHjGg364SRLQDajO7gGjKA2lNo14tTOmRw2SQost-qffYFu3su4Gm4LRpQekKB5_UFZ-2AY0pa183gpFpZwup-dUMP7dnjwMu5eO12tVoSpriC7qaKB2gOKo7vO6JRxhSQSxtLAHXiDs"/>
+          </div>
+          <div class="product-card-body">
+            <div class="product-card-tag">Gỗ Teak · Sofa góc L</div>
+            <h2 class="product-card-title">Sofa Góc L Gỗ Teak</h2>
+            <p class="text-sm text-on-surface-variant mb-2">Gỗ Teak nhập khẩu. Bọc da bò thật cao cấp. Phong cách tối giản.</p>
+            <p class="product-card-price">18,900,000đ</p>
+            <div class="product-card-actions">
+              <button class="btn-card-detail" onclick="window.location.href='chi-tiet.html'">Xem chi tiết</button>
+              <button class="btn-card-contact" onclick="window.location.href='lien-he.html'">Liên hệ</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 4 -->
+      <div class="product-item reveal reveal-delay-1" data-category="3cho">
+        <div class="product-card">
+          <div class="product-card-img">
+            <img alt="Sofa Gỗ Gõ Đỏ 3 Chỗ"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhXbHtBdY0ILPYHodJ6Hl-rbm6bJzekNYfyLvNgZusFrQ2O0_NDNsATeyooiQVkd3tN31CCSiQBFsyZveIJkzXPaIwVo4q2xpcRgOs7dMoPTVCTs7N1j92p1aNJz1Ia4Lta31rSLUHncJihm9N7sQ9DGWa0msi-mfMPdYpXS7R2xkAvpqHsyOH0JWG6wqZQ8lTDPTxrDSaY7GIT98b-fK6CTx8HAgXVi5H-B9HawtggwvFMNMzkGozh9jw_BbzN-c54ZL4qltbyXI"/>
+          </div>
+          <div class="product-card-body">
+            <div class="product-card-tag">Gỗ Gõ Đỏ · Sofa 3 chỗ</div>
+            <h2 class="product-card-title">Sofa Gỗ Gõ Đỏ Heritage</h2>
+            <p class="text-sm text-on-surface-variant mb-2">Gỗ Gõ Đỏ nguyên khối, chạm khắc thủ công. Biểu tượng Heritage Timber.</p>
+            <p class="product-card-price">22,000,000đ</p>
+            <div class="product-card-actions">
+              <button class="btn-card-detail" onclick="window.location.href='chi-tiet.html'">Xem chi tiết</button>
+              <button class="btn-card-contact" onclick="window.location.href='lien-he.html'">Liên hệ</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 5 -->
+      <div class="product-item reveal reveal-delay-2" data-category="2cho">
+        <div class="product-card">
+          <div class="product-card-img">
+            <img alt="Sofa Gỗ Óc Chó 2 Chỗ"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRMYto8rEF3-k5PUjWLy-J9CWGgt2oJDvjDQ4oC8_wABJMQ1yHkFpnSDooPge-PyZFCPh0WvTmvSKlLwjVqbIhWNl6ZQYqg3j-qt6MFrtVvRVrCDTGIt_VY7oe4HIOBco6oLNyr8CLr6mCRXprByqdQSM7sOF_HfosgsuxUV1bWp4K3-zvGmoYNY5T2ZcTdx4X-ldQUwQ8eRfFKIaGdea0gZK2Yg_PIL1BzGcycuES40hhlVruEh4ec-IIWLOuEwrmZ4qcjJ-Tkjk"/>
+          </div>
+          <div class="product-card-body">
+            <div class="product-card-tag">Gỗ Óc Chó · Sofa 2 chỗ</div>
+            <h2 class="product-card-title">Sofa Gỗ Óc Chó 2 Chỗ</h2>
+            <p class="text-sm text-on-surface-variant mb-2">Vân gỗ óc chó đặc trưng, tone màu đậm sang trọng. Nệm nhung cao cấp.</p>
+            <p class="product-card-price">15,200,000đ</p>
+            <div class="product-card-actions">
+              <button class="btn-card-detail" onclick="window.location.href='chi-tiet.html'">Xem chi tiết</button>
+              <button class="btn-card-contact" onclick="window.location.href='lien-he.html'">Liên hệ</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 6 – Custom -->
+      <div class="product-item reveal reveal-delay-3" data-category="custom">
+        <div class="product-card">
+          <div class="product-card-img" style="background:#f1ede8;display:flex;align-items:center;justify-content:center;min-height:240px">
+            <div class="text-center p-8">
+              <span class="material-symbols-outlined text-5xl text-primary/30 mb-4">architecture</span>
+              <p class="text-on-surface-variant font-semibold">Thiết kế theo yêu cầu</p>
+              <p class="text-xs text-on-surface-variant mt-2 opacity-70">Tùy chỉnh kích thước, màu sắc, chất liệu</p>
+            </div>
+          </div>
+          <div class="product-card-body">
+            <div class="product-card-tag">Thiết kế riêng</div>
+            <h2 class="product-card-title">Sofa Theo Yêu Cầu</h2>
+            <p class="text-sm text-on-surface-variant mb-2">Không giới hạn sáng tạo. Báo giá dựa trên kích thước và chất liệu.</p>
+            <p class="product-card-price">Liên hệ báo giá</p>
+            <div class="product-card-actions">
+              <button class="btn-card-detail" onclick="window.location.href='dich-vu.html'">Xem dịch vụ</button>
+              <button class="btn-card-contact" onclick="window.location.href='lien-he.html'">Liên hệ</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA Banner -->
+<section class="py-20 bg-primary">
+  <div class="container text-center">
+    <h2 class="text-3xl md:text-4xl font-bold text-white mb-5 font-headline">Không tìm thấy mẫu phù hợp?</h2>
+    <p class="text-white/80 mb-8 text-lg max-w-2xl mx-auto">Chúng tôi thiết kế và sản xuất sofa gỗ theo kích thước và chất liệu riêng của bạn.</p>
+    <a href="lien-he.html" class="btn-secondary inline-flex text-base px-10 py-4 font-bold hover:scale-105 transition-transform">
+      <span class="material-symbols-outlined">chat_bubble</span>
+      Liên hệ ngay
+    </a>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="main-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <h3>Xưởng Gỗ Long Anh</h3>
+      <p>Nội thất gỗ tự nhiên cao cấp – Gia công tại xưởng, bảo hành 5 năm.</p>
+      <div class="footer-socials mt-4">
+        <a href="https://web.facebook.com/xuonggoolonganh/" target="_blank" rel="noopener" aria-label="Facebook"><span class="material-symbols-outlined text-sm">public</span></a>
+        <a href="#" aria-label="Zalo"><span style="font-size:13px;font-weight:700;font-family:'Be Vietnam Pro'">Z</span></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Sản phẩm</h4>
+      <ul>
+        <li><a href="sofa.html">Sofa gỗ</a></li>
+        <li><a href="ban-ghe.html">Bàn ăn</a></li>
+        <li><a href="ban-ghe.html">Kệ TV</a></li>
+        <li><a href="dich-vu.html">Theo yêu cầu</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Dịch vụ</h4>
+      <ul>
+        <li><a href="dich-vu.html">Tư vấn thiết kế</a></li>
+        <li><a href="dich-vu.html">Bảo hành & Bảo trì</a></li>
+        <li><a href="dich-vu.html">Vận chuyển & Lắp đặt</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Liên hệ</h4>
+      <div class="footer-contact-item"><span class="material-symbols-outlined">location_on</span>Giao Tác - Thư Lâm - Hà Nội</div>
+      <div class="footer-contact-item"><span class="material-symbols-outlined">call</span>0353 135 887 / 0971 212 706 (Call/Zalo)</div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2024 <strong>Xưởng Gỗ Long Anh</strong>. Đẳng cấp nghệ nhân Việt.</p>
+    <div class="flex gap-4 text-xs text-on-surface-variant">
+      <a href="index.html" class="hover:text-secondary transition-colors">Trang chủ</a>
+      <a href="lien-he.html" class="hover:text-secondary transition-colors">Liên hệ</a>
+    </div>
+  </div>
+</footer>
+
+<div class="fab-container">
+  <a href="tel:0353135887" class="fab-btn fab-phone" title="Gọi ngay">
+    <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">call</span>
+  </a>
+  <a href="https://zalo.me/0353135887" target="_blank" class="fab-btn fab-zalo" title="Zalo">Z</a>
+  <button class="fab-btn fab-top" id="fab-top" title="Lên đầu trang">
+    <span class="material-symbols-outlined">keyboard_arrow_up</span>
+  </button>
+</div>
+
+<script src="assets/shared.js"></script>
+<script>
+  // Hamburger
+  document.getElementById('hamburger-btn').addEventListener('click', function() {
+    this.classList.toggle('open');
+    document.getElementById('mobile-nav').classList.toggle('open');
+  });
+
+  // Filter
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const productItems = document.querySelectorAll('.product-item');
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const filter = btn.dataset.filter;
+
+      productItems.forEach(item => {
+        if (filter === 'all' || item.dataset.category === filter) {
+          item.style.display = '';
+          setTimeout(() => { item.style.opacity = '1'; item.style.transform = 'scale(1)'; }, 10);
+        } else {
+          item.style.opacity = '0';
+          item.style.transform = 'scale(0.95)';
+          setTimeout(() => { item.style.display = 'none'; }, 400);
+        }
+      });
+    });
+  });
+</script>
+</body>
+</html>

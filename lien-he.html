@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Liên Hệ | Xưởng Gỗ Long Anh – Nội Thất Gỗ Tự Nhiên</title>
+  <meta name="description" content="Liên hệ Xưởng Gỗ Long Anh để được tư vấn thiết kế nội thất gỗ miễn phí. Gọi 0353 135 887 hoặc 0971 212 706 (Call/Zalo) hoặc gửi yêu cầu qua form."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700&family=Noto+Serif:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="assets/shared.css"/>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#502905","primary-container": "#6b3f1a","secondary": "#875200",
+            "secondary-container": "#ffb865","surface": "#fdf9f4","surface-container-low": "#f7f3ee",
+            "surface-container": "#f1ede8","surface-container-high": "#ebe8e3",
+            "surface-container-lowest": "#ffffff","outline": "#84746a","outline-variant": "#d6c3b7",
+            "on-surface": "#1c1c19","on-surface-variant": "#51443b","on-primary": "#ffffff","on-secondary": "#ffffff",
+            "error": "#ba1a1a",
+          },
+          fontFamily: { "headline": ["Noto Serif","serif"],"body": ["Be Vietnam Pro","sans-serif"] }
+        }
+      }
+    }
+  </script>
+  <style>
+    .form-input {
+      width: 100%;
+      padding: 0.875rem 1rem;
+      background: white;
+      border: 1px solid rgba(214, 195, 183, 0.5);
+      border-radius: 8px;
+      font-family: 'Be Vietnam Pro', sans-serif;
+      font-size: 0.9rem;
+      color: #1c1c19;
+      outline: none;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .form-input:focus { border-color: #875200; box-shadow: 0 0 0 3px rgba(135,82,0,0.1); }
+    .form-input.error { border-color: #ba1a1a; }
+    .form-label { font-size: 0.8rem; font-weight: 600; color: rgba(80,41,5,0.8); margin-bottom: 0.4rem; display: block; }
+    .error-msg { color: #ba1a1a; font-size: 0.75rem; margin-top: 0.3rem; display: none; }
+    .error-msg.show { display: block; }
+    /* Map embed */
+    .map-embed { width:100%; aspect-ratio:16/9; border:none; border-radius:12px; filter:grayscale(30%); }
+    /* Gallery hover */
+    .gallery-item { overflow: hidden; border-radius: 12px; }
+    .gallery-item img { width:100%; height:100%; object-fit:cover; transition:transform 0.7s ease; }
+    .gallery-item:hover img { transform: scale(1.1); }
+    .gallery-overlay { position:absolute;inset:0;background:linear-gradient(to top,rgba(80,41,5,0.8),transparent);opacity:0;transition:opacity 0.5s;display:flex;align-items:flex-end;padding:1.5rem;border-radius:12px; }
+    .gallery-item:hover .gallery-overlay { opacity:1; }
+  </style>
+</head>
+<body>
+
+<div class="page-loader"><div class="loader-spinner"></div></div>
+
+<!-- Navigation -->
+<nav class="main-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand">Xưởng Gỗ Long Anh</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Trang chủ</a></li>
+      <li><a href="sofa.html">Sofa</a></li>
+      <li><a href="ban-ghe.html">Bàn ghế</a></li>
+      <li><a href="dich-vu.html">Dịch vụ</a></li>
+      <li><a href="lien-he.html" class="active">Liên hệ</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="#contact-form" class="btn-consult">Gửi yêu cầu</a>
+      <button class="hamburger" id="hamburger-btn"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+<div class="mobile-nav" id="mobile-nav">
+  <ul>
+    <li><a href="index.html">Trang chủ</a></li>
+    <li><a href="sofa.html">Sofa</a></li>
+    <li><a href="ban-ghe.html">Bàn ghế</a></li>
+    <li><a href="dich-vu.html">Dịch vụ</a></li>
+    <li><a href="lien-he.html" class="active">Liên hệ</a></li>
+  </ul>
+  <a href="#contact-form" class="btn-consult">Gửi yêu cầu ngay</a>
+</div>
+
+<!-- Hero -->
+<section class="mt-[72px] relative h-[400px] flex items-center justify-center overflow-hidden">
+  <div class="absolute inset-0">
+    <img alt="" class="w-full h-full object-cover" style="filter:brightness(0.35)"
+      src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXPhJDKDE47b3G3FLir3gbM-K8enoW7O9WlehjdDNab9py9pn0urt31CPxOBdn_43WP7YftnwTkgxCsvVObk2f3ZGHbHtgTavljhL5n7NzS-376b1HjPl_DtX24ekmLY0MageZvra4N-34woQg7U1dsgZ79jnA9bI_11O8Lp2t5ImqO5HgUi8uh52YuggHB-aL_vF-Puj6tGdPULCsjz5hfF0fgLfZluhLPiM9ZZMaRxzvCL5kYXSTLnnkiaEMEYiFYYEWL6FCXQY"/>
+  </div>
+  <div class="absolute inset-0" style="background:linear-gradient(135deg,rgba(80,41,5,0.9) 0%,rgba(107,63,26,0.75) 100%)"></div>
+  <div class="relative z-10 text-center px-4 reveal">
+    <span class="section-label" style="color:#ffb865">Chúng tôi sẵn sàng hỗ trợ bạn</span>
+    <h1 class="font-headline text-5xl md:text-6xl font-bold text-white mb-4 tracking-tight mt-2">Liên Hệ Với Chúng Tôi</h1>
+    <p class="text-white/80 text-lg max-w-2xl mx-auto">Nhận tư vấn miễn phí từ đội ngũ kiến trúc sư và nghệ nhân giàu kinh nghiệm.</p>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section class="py-20 bg-surface" id="contact-form">
+  <div class="container">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+
+      <!-- LEFT: Contact Info + Map -->
+      <div class="lg:col-span-5 space-y-10 reveal">
+        <!-- Info Cards -->
+        <div class="space-y-6">
+          <div class="flex items-start gap-5 group">
+            <div class="w-12 h-12 flex items-center justify-center bg-surface-container-high text-secondary rounded-xl shrink-0 group-hover:bg-secondary group-hover:text-white transition-all">
+              <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">location_on</span>
+            </div>
+            <div>
+              <h3 class="font-headline text-lg font-bold text-primary mb-1">Địa chỉ showroom</h3>
+              <p class="text-on-surface-variant leading-relaxed text-sm">Giao Tác - Thư Lâm - Hà Nội</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-5 group">
+            <div class="w-12 h-12 flex items-center justify-center bg-surface-container-high text-secondary rounded-xl shrink-0 group-hover:bg-secondary group-hover:text-white transition-all">
+              <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">call</span>
+            </div>
+            <div>
+              <h3 class="font-headline text-lg font-bold text-primary mb-1">Điện thoại</h3>
+              <a href="tel:0353135887" class="text-on-surface-variant text-sm hover:text-secondary transition-colors">0353 135 887 / <a href="tel:0971212706" style="color:inherit">0971 212 706</a> <span class="text-secondary font-medium">(Call/Zalo)</span></a>
+            </div>
+          </div>
+          <div class="flex items-start gap-5 group">
+            <div class="w-12 h-12 flex items-center justify-center bg-surface-container-high text-secondary rounded-xl shrink-0 group-hover:bg-secondary group-hover:text-white transition-all">
+              <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">mail</span>
+            </div>
+            <div>
+              <h3 class="font-headline text-lg font-bold text-primary mb-1">Email</h3>
+              <a href="mailto:noithat@longanhwood.vn" class="text-on-surface-variant text-sm hover:text-secondary transition-colors">noithat@longanhwood.vn</a>
+            </div>
+          </div>
+          <div class="flex items-start gap-5 group">
+            <div class="w-12 h-12 flex items-center justify-center bg-surface-container-high text-secondary rounded-xl shrink-0 group-hover:bg-secondary group-hover:text-white transition-all">
+              <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">public</span>
+            </div>
+            <div>
+              <h3 class="font-headline text-lg font-bold text-primary mb-1">Facebook</h3>
+              <a href="#" class="text-on-surface-variant text-sm hover:text-secondary transition-colors">facebook.com/longanhnoithat</a>
+            </div>
+          </div>
+          <div class="flex items-start gap-5 group">
+            <div class="w-12 h-12 flex items-center justify-center bg-surface-container-high text-secondary rounded-xl shrink-0 group-hover:bg-secondary group-hover:text-white transition-all">
+              <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">schedule</span>
+            </div>
+            <div>
+              <h3 class="font-headline text-lg font-bold text-primary mb-1">Giờ làm việc</h3>
+              <div class="text-on-surface-variant text-sm space-y-0.5">
+                <p>Thứ 2 – Thứ 7: 8:00 – 18:00</p>
+                <p>Chủ nhật: 9:00 – 16:00</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Map -->
+        <div class="rounded-xl overflow-hidden shadow-md relative group">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.523779026428!2d106.6785!3d10.7769!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317528c6c2e4db69%3A0x39c59c0e0e54b8f7!2zUXXhuq1uIDMsIEjhu5MgQ2jDrSBNaW5o!5e0!3m2!1svi!2svg!4v1700000000000"
+            class="map-embed"
+            loading="lazy"
+            allowfullscreen
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Xưởng Gỗ Long Anh – Bản đồ"
+          ></iframe>
+        </div>
+      </div>
+
+      <!-- RIGHT: Contact Form -->
+      <div class="lg:col-span-7 reveal reveal-delay-2">
+        <div class="bg-surface-container-low p-8 md:p-12 rounded-2xl border-l-4 border-secondary">
+          <div class="mb-8">
+            <h2 class="font-headline text-3xl font-bold text-primary mb-3">Gửi yêu cầu tư vấn</h2>
+            <p class="text-on-surface-variant">Để lại thông tin, đội ngũ kiến trúc sư của chúng tôi sẽ tư vấn giải pháp nội thất gỗ tối ưu cho không gian của bạn.</p>
+          </div>
+
+          <form id="contact-form-elem" novalidate class="space-y-5">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+              <div>
+                <label class="form-label" for="full-name">Họ và tên *</label>
+                <input class="form-input" id="full-name" type="text" placeholder="Nhập họ và tên" required/>
+                <span class="error-msg" id="name-error">Vui lòng nhập họ và tên</span>
+              </div>
+              <div>
+                <label class="form-label" for="phone">Số điện thoại *</label>
+                <input class="form-input" id="phone" type="tel" placeholder="Nhập số điện thoại" required/>
+                <span class="error-msg" id="phone-error">Vui lòng nhập số điện thoại hợp lệ</span>
+              </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+              <div>
+                <label class="form-label" for="email">Email</label>
+                <input class="form-input" id="email" type="email" placeholder="Địa chỉ email của bạn"/>
+                <span class="error-msg" id="email-error">Email không hợp lệ</span>
+              </div>
+              <div>
+                <label class="form-label" for="product">Sản phẩm quan tâm</label>
+                <select class="form-input" id="product" style="cursor:pointer">
+                  <option value="">Chọn sản phẩm...</option>
+                  <option>Sofa gỗ</option>
+                  <option>Bàn ăn</option>
+                  <option>Ghế ăn</option>
+                  <option>Kệ TV</option>
+                  <option>Thiết kế toàn bộ nội thất</option>
+                  <option>Khác</option>
+                </select>
+              </div>
+            </div>
+            <div>
+              <label class="form-label" for="budget">Ngân sách dự kiến</label>
+              <select class="form-input" id="budget" style="cursor:pointer">
+                <option value="">Chọn ngân sách...</option>
+                <option>Dưới 10 triệu</option>
+                <option>10 – 30 triệu</option>
+                <option>30 – 100 triệu</option>
+                <option>Trên 100 triệu</option>
+              </select>
+            </div>
+            <div>
+              <label class="form-label" for="message">Ghi chú / Mô tả yêu cầu</label>
+              <textarea class="form-input" id="message" rows="4" placeholder="Mô tả dự án hoặc yêu cầu cụ thể của bạn (kích thước không gian, phong cách mong muốn...)"></textarea>
+            </div>
+
+            <div class="pt-2 flex flex-col sm:flex-row items-center gap-5">
+              <button type="submit" class="btn-primary w-full sm:w-auto px-10 py-4 text-base justify-center">
+                <span class="material-symbols-outlined">send</span>
+                Gửi yêu cầu
+              </button>
+              <span class="text-sm text-on-surface-variant italic flex items-center gap-2">
+                <span class="material-symbols-outlined text-secondary text-base" style="font-variation-settings:'FILL' 1">schedule</span>
+                Phản hồi trong vòng 2 giờ
+              </span>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Showroom Gallery -->
+<section class="py-24 bg-surface-container-low">
+  <div class="container">
+    <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6 reveal">
+      <div class="max-w-xl">
+        <span class="section-label">Showroom</span>
+        <h2 class="font-headline text-4xl font-bold text-primary mt-2">Ghé thăm showroom của chúng tôi</h2>
+        <p class="text-on-surface-variant mt-3">Trải nghiệm trực tiếp chất liệu gỗ tự nhiên thượng hạng và sự tinh xảo trong từng đường nét thủ công.</p>
+      </div>
+      <a href="sofa.html" class="font-headline font-bold text-secondary border-b-2 border-secondary/40 hover:border-secondary transition-all pb-1 whitespace-nowrap">
+        Xem sản phẩm online →
+      </a>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="gallery-item relative aspect-[4/5] reveal reveal-delay-1">
+        <img alt="Bộ bàn ăn Gỗ Óc Chó – Showroom Long Anh"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQzNNqJzKgAeg1TjXEnhmJtvP0oU-S__cJIJgr-DcZg1hvfnTu_ajB6gmynrx6cOGi0NMZmWSUo4tNX8x5-BnhTpS5m_zhcgOLtkHD7_8NUD29Bvcmm9wnzcHHZK864I-r40P7F0TL534o0gdmuECFr6l9YVfOv6yOf0MSXwNlwtxmox9NlUv8IQtTDDcT2x7eWQmgXfRxrXPIQZt6aG8EdNPdl3A2DPILmg8580UVknwybsMnCRFo7I-gWteLOUOTvQh3PhPPAyM"/>
+        <div class="gallery-overlay"><p class="text-white font-headline text-lg font-semibold">Bộ bàn ăn Gỗ Óc Chó</p></div>
+      </div>
+      <div class="gallery-item relative aspect-[4/5] md:mt-12 reveal reveal-delay-2">
+        <img alt="Sofa Gỗ Gõ Đỏ Heritage – Showroom Long Anh"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuBr0rkQwwBjoiVzLf7T9pOgppyx67Xz5XbynMdzljAVlnmRQ1YrmG57g0JlAMF6Pxo3u_SCAlyj5g9ZS6UktEn5l_s_W4TEnSpWchsC0u_3vyOOdW0QD2JS96xBtgOGYJq4PfyYMJoVBq1DCL5dd3M1waXevuenZxhveMTuQ93bVkIeHldBovm7qg2lWj2PEXwlS1QXoOj19TUx9QlToDCNwhUHMLF3rxCjAYMh3JGkNFdCwvScTFUdJ4Zh5ZroPBGFvGRSMZSykNg"/>
+        <div class="gallery-overlay"><p class="text-white font-headline text-lg font-semibold">Sofa Gỗ Gõ Đỏ Heritage</p></div>
+      </div>
+      <div class="gallery-item relative aspect-[4/5] reveal reveal-delay-3">
+        <img alt="Nội thất phòng ngủ gỗ tự nhiên – Showroom Long Anh"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkPoKrmNdpKsar1dOB2dgeqs_RgMcxuTgnbRGjczI6JEKSn4sTKz1CV8eve8x0Eo7UulXKHpwQuzDbxHx4FAupprZ8EHfr7Hw010Jn-YqRqzHvCTaQaH2VmEvU0YDj9wnAL2uiZv2vGKwq_kNubKqM0BWsJfgbPHMqtmhHlNwu7N2dchuOpI8kkmTGicmerOmASnpNy1v5tMPplVvaOcwAUU4a1tGHFITd7nmByfoMV49xi7UWnfrzaKy3-2ABu1mp8i1QkluccK0"/>
+        <div class="gallery-overlay"><p class="text-white font-headline text-lg font-semibold">Nội thất Phòng ngủ</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="main-footer">
+  <div class="footer-inner">
+    <div class="footer-brand"><h3>Xưởng Gỗ Long Anh</h3><p>Nội thất gỗ tự nhiên cao cấp – Gia công tại xưởng, bảo hành 5 năm. © 2024 Xưởng Gỗ Long Anh.</p><div class="footer-socials mt-4"><a href="#" aria-label="Facebook"><span class="material-symbols-outlined text-sm">public</span></a><a href="#" aria-label="Zalo"><span style="font-size:13px;font-weight:700">Z</span></a><a href="#" aria-label="YouTube"><span class="material-symbols-outlined text-sm">smart_display</span></a></div></div>
+    <div class="footer-col"><h4>Sản phẩm</h4><ul><li><a href="sofa.html">Sofa gỗ</a></li><li><a href="ban-ghe.html">Bàn ăn</a></li><li><a href="ban-ghe.html">Kệ TV</a></li><li><a href="dich-vu.html">Theo yêu cầu</a></li></ul></div>
+    <div class="footer-col"><h4>Dịch vụ</h4><ul><li><a href="dich-vu.html">Tư vấn thiết kế</a></li><li><a href="dich-vu.html">Bảo hành & Bảo trì</a></li><li><a href="dich-vu.html">Vận chuyển & Lắp đặt</a></li></ul></div>
+    <div class="footer-col"><h4>Liên hệ trực tiếp</h4><div class="footer-contact-item"><span class="material-symbols-outlined">location_on</span>Giao Tác - Thư Lâm - Hà Nội</div><div class="footer-contact-item"><span class="material-symbols-outlined">call</span><a href="tel:0353135887" class="hover:text-secondary transition-colors">0353 135 887</a> / <a href="tel:0971212706" class="hover:text-secondary transition-colors">0971 212 706</a></div><div class="footer-contact-item"><span class="material-symbols-outlined">mail</span><a href="mailto:noithat@longanhwood.vn" class="hover:text-secondary transition-colors">noithat@longanhwood.vn</a></div></div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2024 <strong>Xưởng Gỗ Long Anh</strong>. Đẳng cấp nghệ nhân Việt.</p>
+    <div class="flex gap-4 text-xs text-on-surface-variant">
+      <a href="index.html" class="hover:text-secondary transition-colors">Trang chủ</a>
+      <a href="dich-vu.html" class="hover:text-secondary transition-colors">Dịch vụ</a>
+    </div>
+  </div>
+</footer>
+
+<div class="fab-container">
+  <a href="tel:0353135887" class="fab-btn fab-phone" title="Gọi ngay"><span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">call</span></a>
+  <a href="https://zalo.me/0353135887" target="_blank" class="fab-btn fab-zalo" title="Zalo">Z</a>
+  <button class="fab-btn fab-top" id="fab-top"><span class="material-symbols-outlined">keyboard_arrow_up</span></button>
+</div>
+
+<script src="assets/shared.js"></script>
+<script>
+  document.getElementById('hamburger-btn').addEventListener('click', function() {
+    this.classList.toggle('open');
+    document.getElementById('mobile-nav').classList.toggle('open');
+  });
+
+  // Form validation
+  const form = document.getElementById('contact-form-elem');
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    let valid = true;
+
+    // Name validation
+    const name = document.getElementById('full-name');
+    const nameError = document.getElementById('name-error');
+    if (!name.value.trim()) {
+      name.classList.add('error');
+      nameError.classList.add('show');
+      valid = false;
+    } else {
+      name.classList.remove('error');
+      nameError.classList.remove('show');
+    }
+
+    // Phone validation
+    const phone = document.getElementById('phone');
+    const phoneError = document.getElementById('phone-error');
+    const phoneRegex = /^(0|\+84)[0-9]{8,10}$/; // 0353135887 or 0971212706
+    if (!phoneRegex.test(phone.value.trim())) {
+      phone.classList.add('error');
+      phoneError.classList.add('show');
+      valid = false;
+    } else {
+      phone.classList.remove('error');
+      phoneError.classList.remove('show');
+    }
+
+    // Email validation (optional but if filled)
+    const email = document.getElementById('email');
+    const emailError = document.getElementById('email-error');
+    if (email.value && !/\S+@\S+\.\S+/.test(email.value)) {
+      email.classList.add('error');
+      emailError.classList.add('show');
+      valid = false;
+    } else {
+      email.classList.remove('error');
+      emailError.classList.remove('show');
+    }
+
+    if (valid) {
+      // Simulate form submission
+      const btn = form.querySelector('button[type="submit"]');
+      btn.disabled = true;
+      btn.innerHTML = '<span class="material-symbols-outlined animate-spin" style="animation:spin 1s linear infinite">sync</span> Đang gửi...';
+
+      setTimeout(() => {
+        form.reset();
+        btn.disabled = false;
+        btn.innerHTML = '<span class="material-symbols-outlined">send</span> Gửi yêu cầu';
+        window.showToast('Yêu cầu đã được gửi! Chúng tôi sẽ liên hệ lại trong 2 giờ. 🪵', 'check_circle');
+      }, 1500);
+    }
+  });
+
+  // Clear error on input
+  document.querySelectorAll('.form-input').forEach(input => {
+    input.addEventListener('input', () => input.classList.remove('error'));
+  });
+</script>
+</body>
+</html>

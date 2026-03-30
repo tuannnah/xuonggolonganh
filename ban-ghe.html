@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bàn Ghế Gỗ Cao Cấp | Xưởng Gỗ Long Anh – Nội Thất Gỗ Tự Nhiên</title>
+  <meta name="description" content="Bàn ăn, ghế ăn, kệ TV, bàn cà phê gỗ tự nhiên cao cấp. Gia công tại xưởng, bảo hành 5 năm."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700&family=Noto+Serif:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="assets/shared.css"/>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#502905","primary-container": "#6b3f1a","secondary": "#875200",
+            "secondary-container": "#ffb865","surface": "#fdf9f4","surface-container-low": "#f7f3ee",
+            "surface-container": "#f1ede8","surface-container-high": "#ebe8e3",
+            "surface-container-lowest": "#ffffff","outline": "#84746a","outline-variant": "#d6c3b7",
+            "on-surface": "#1c1c19","on-surface-variant": "#51443b","on-primary": "#ffffff","on-secondary": "#ffffff",
+          },
+          fontFamily: { "headline": ["Noto Serif","serif"],"body": ["Be Vietnam Pro","sans-serif"] }
+        }
+      }
+    }
+  </script>
+  <style>
+    .filter-tab { transition: all 0.25s ease; border-bottom: 2px solid transparent; padding-bottom: 8px; }
+    .filter-tab.active { color: #875200; border-bottom-color: #875200; }
+    .product-item { transition: opacity 0.4s ease, transform 0.4s ease; }
+  </style>
+</head>
+<body>
+
+<div class="page-loader"><div class="loader-spinner"></div></div>
+
+<!-- Navigation -->
+<nav class="main-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand">Xưởng Gỗ Long Anh</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Trang chủ</a></li>
+      <li><a href="sofa.html">Sofa</a></li>
+      <li><a href="ban-ghe.html" class="active">Bàn ghế</a></li>
+      <li><a href="dich-vu.html">Dịch vụ</a></li>
+      <li><a href="lien-he.html">Liên hệ</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="lien-he.html" class="btn-consult">Liên hệ tư vấn</a>
+      <button class="hamburger" id="hamburger-btn"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+<div class="mobile-nav" id="mobile-nav">
+  <ul>
+    <li><a href="index.html">Trang chủ</a></li>
+    <li><a href="sofa.html">Sofa</a></li>
+    <li><a href="ban-ghe.html" class="active">Bàn ghế</a></li>
+    <li><a href="dich-vu.html">Dịch vụ</a></li>
+    <li><a href="lien-he.html">Liên hệ</a></li>
+  </ul>
+  <a href="lien-he.html" class="btn-consult">Liên hệ tư vấn ngay</a>
+</div>
+
+<!-- Page Hero -->
+<section class="mt-[72px] relative py-24 md:py-32 overflow-hidden">
+  <div class="absolute inset-0" style="background:linear-gradient(135deg,#502905 0%,#6b3f1a 60%,#875200 100%)"></div>
+  <div class="absolute inset-0 opacity-10" style="background-image:url('https://www.transparenttextures.com/patterns/wood-pattern.png');background-size:cover;mix-blend-mode:overlay"></div>
+  <div class="container relative z-10">
+    <nav class="flex items-center gap-2 text-xs opacity-70 mb-6 text-white">
+      <a href="index.html" class="hover:opacity-100">Trang chủ</a>
+      <span class="material-symbols-outlined text-[10px]">chevron_right</span>
+      <span style="color:#ffb865">Bàn ghế</span>
+    </nav>
+    <div class="max-w-2xl">
+      <span class="section-label" style="color:#ffb865">Bộ sưu tập</span>
+      <h1 class="text-5xl md:text-6xl font-bold text-white mb-5 leading-tight">Bàn Ghế Gỗ Cao Cấp</h1>
+      <p class="text-lg text-white/80 leading-relaxed">Nội thất bền đẹp, nâng tầm không gian sống. Mỗi sản phẩm là một tuyệt tác thủ công từ những thớ gỗ tự nhiên chọn lọc.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Category Tabs -->
+<section class="py-6 bg-surface-container border-b border-outline-variant/20 sticky top-[72px] z-40">
+  <div class="container">
+    <div class="flex flex-wrap gap-x-6 gap-y-3 items-center">
+      <button class="filter-tab active text-sm font-semibold text-on-surface-variant" data-filter="all" id="tab-all">Tất cả</button>
+      <button class="filter-tab text-sm font-semibold text-on-surface-variant" data-filter="banan" id="tab-banan">Bàn Ăn</button>
+      <button class="filter-tab text-sm font-semibold text-on-surface-variant" data-filter="ghean" id="tab-ghean">Ghế Ăn</button>
+      <button class="filter-tab text-sm font-semibold text-on-surface-variant" data-filter="ketv" id="tab-ketv">Kệ TV</button>
+      <button class="filter-tab text-sm font-semibold text-on-surface-variant" data-filter="banca" id="tab-banca">Bàn Cà Phê</button>
+      <button class="filter-tab text-sm font-semibold text-on-surface-variant" data-filter="tutrang" id="tab-tutrang">Tủ Trang Trí</button>
+    </div>
+  </div>
+</section>
+
+<!-- Product Grid -->
+<section class="py-16 bg-surface">
+  <div class="container">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="banghe-grid">
+
+      <!-- Bàn ăn sồi 4 người -->
+      <div class="product-item reveal reveal-delay-1" data-category="banan">
+        <div class="product-card h-full">
+          <div class="product-card-img" style="aspect-ratio:4/5">
+            <img alt="Bàn Ăn Gỗ Sồi 4 Người"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBED3ZshTi8xa8vAoqkVbc3AQDJZ-oLJZWTncB3Y94EsC7jb9Z1IqfRPUeUs93I7UAj1dsgiGvTlUoRx97KdwpVGXZM7QY5_ESaUCTVk6cF2wNSdrDbYL9zlS7qH21NYgTYEgRUFi0yPs0hHhuB6PsYYJs73K1GZ3APEhRNXaForCBjQslwOTyB4Pnm_zf8J-yMn2OtOR6Ex08YUQnkj_ZSzSLNNBgZCgEWeVgS4Lklcb7Oh0iaXqlVMKNF24vWBYw8nb62-cHn0FA"/>
+          </div>
+          <div class="product-card-body flex flex-col h-auto">
+            <div class="product-card-tag">Gỗ Sồi Nga</div>
+            <h2 class="product-card-title">Bàn Ăn Gỗ Sồi 4 Người</h2>
+            <p class="product-card-price">6,800,000đ</p>
+            <div class="product-card-actions mt-auto">
+              <button class="btn-card-detail" onclick="window.location.href='chi-tiet.html'">Xem chi tiết</button>
+              <button class="btn-card-contact" onclick="window.location.href='lien-he.html'">Liên hệ</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bàn ăn óc chó 6 người -->
+      <div class="product-item reveal reveal-delay-2" data-category="banan">
+        <div class="product-card h-full">
+          <div class="product-card-img" style="aspect-ratio:4/5">
+            <img alt="Bàn Ăn Gỗ Óc Chó 6 Người"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-wJXSytS-H0kDhSPcxWh7zjNefxotVnrelVIZEiAeVUx22YdfxuNCcnKq_Y9h6gULjQ5Cmi3iUNCi0OwkLM3bAW5das8jIDfQKVRcUeTbqgX_Ets57xLmkucNXWrY7wIk6vjLfnTWqzgwSR6B_A4Y10ZbP4BK_lkGZGucafAB4wQGFL6suk-lYGtek8KXBtZb4qAcM2DuBDyF-D7VF6AxDnv7sYobVSi7PzxnyvtkOhthXoWewWR9ds4G4tKd-S5vB-_X047BuiY"/>
+          </div>
+          <div class="product-card-body flex flex-col">
+            <div class="product-card-tag">Gỗ Óc Chó</div>
+            <h2 class="product-card-title">Bàn Ăn Gỗ Óc Chó 6 Người</h2>
+            <p class="product-card-price">14,500,000đ</p>
+            <div class="product-card-actions mt-auto">
+              <button class="btn-card-detail" onclick="window.location.href='chi-tiet.html'">Xem chi tiết</button>
+              <button class="btn-card-contact" onclick="window.location.href='lien-he.html'">Liên hệ</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Ghế ăn teak -->
+      <div class="product-item reveal reveal-delay-3" data-category="ghean">
+        <div class="product-card h-full">
+          <div class="product-card-img" style="aspect-ratio:4/5">
+            <img alt="Ghế Ăn Gỗ Teak (bộ 4)"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_DDGMwRzPWX1OJtMKb-h5tzZpObe8zJZKKThx9g6WQM3mIUCO6lcoX1R8aLPiMtPdfG-9f53qPAF71Xd1VphBYt5BmW7rZdEnQEZX_e8A1p1_u_3w_6B9lQtJ04b4hCP7X8XNE04r3X2AsKrc7t5VNRcOZVoro6eR6PY5YXFhbfQUgZnnWGGMkJEP3t0anngi8__0L-UGkYoBbU1w0Q4eXeyRTA6B3tvojhrKRWVu3HtXeaMVUzEtpn3QhDC3MOKJwfZqXVf9O2g"/>
+          </div>
+          <div class="product-card-body flex flex-col">
+            <div class="product-card-tag">Gỗ Teak</div>
+            <h2 class="product-card-title">Ghế Ăn Gỗ Teak (bộ 4)</h2>
+            <p class="product-card-price">4,200,000đ</p>
+            <div class="product-card-actions mt-auto">
+              <button class="btn-card-detail" onclick="window.location.href='chi-tiet.html'">Xem chi tiết</button>
+              <button class="btn-card-contact" onclick="window.location.href='lien-he.html'">Liên hệ</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Kệ TV -->
+      <div class="product-item reveal reveal-delay-1" data-category="ketv">
+        <div class="product-card h-full">
+          <div class="product-card-img" style="aspect-ratio:4/5">
+            <img alt="Kệ TV Gỗ Tự Nhiên"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmW9PvouLGSIfEku3DAjw7KRhTw9Me6ut4-DKb4LQzpHjfFgcGta1M2wxgyHO6w_CtXx2JLaAirJV4jKvsQ3AR7ZkbUZesaoM2gVW2j6H93YeDlFaV2jouZ0aL7KZxRWSBcYzhU1bMH0xZXR2W_xvfKHKmj0mKw8jVHbD-_4MhCFWp51s-ws9gyQxsEEV7JeAmCdKbo5oWmrJ_5ujwHI58bW-_0SFsrqBTJ5k2H08bN0fi5psvu0T6cI23fcme-KRGYq6_LjPFaPg"/>
+          </div>
+          <div class="product-card-body flex flex-col">
+            <div class="product-card-tag">Gỗ Tự Nhiên</div>
+            <h2 class="product-card-title">Kệ TV Gỗ Tự Nhiên</h2>
+            <p class="product-card-price">5,900,000đ</p>
+            <div class="product-card-actions mt-auto">
+              <button class="btn-card-detail" onclick="window.location.href='chi-tiet.html'">Xem chi tiết</button>
+              <button class="btn-card-contact" onclick="window.location.href='lien-he.html'">Liên hệ</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bàn cà phê -->
+      <div class="product-item reveal reveal-delay-2" data-category="banca">
+        <div class="product-card h-full">
+          <div class="product-card-img" style="aspect-ratio:4/5">
+            <img alt="Bộ Bàn Cà Phê Gỗ + Kính"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmUVa_9mOJmlTlNhzCWYQyYu0gv9a5HTQfGNHoDzFeC_JRNVfgNeOZc1HBdqAoY03iroUImRBMCCQHhR7HCYJ3qQ5aq2BsRnayOyNBkGX2FXm8etzOslWw5DR9k3e6wpjXfYlnK4_6S-YS05d_ItXjgpYPyoTv-joGfrN4p12Yb0VdgADPXzMUNI0cNL3yfkOVSdKNeBdnmXLbQutyTvYoSaq3vUQiF3ZtulptxuAXWEJPj_zy9pGQ9Vmo9l9Ms6yFpzWwKfIL_KQ"/>
+          </div>
+          <div class="product-card-body flex flex-col">
+            <div class="product-card-tag">Gỗ & Kính</div>
+            <h2 class="product-card-title">Bộ Bàn Cà Phê Gỗ + Kính</h2>
+            <p class="product-card-price">7,200,000đ</p>
+            <div class="product-card-actions mt-auto">
+              <button class="btn-card-detail" onclick="window.location.href='chi-tiet.html'">Xem chi tiết</button>
+              <button class="btn-card-contact" onclick="window.location.href='lien-he.html'">Liên hệ</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tủ trang trí -->
+      <div class="product-item reveal reveal-delay-3" data-category="tutrang">
+        <div class="product-card h-full">
+          <div class="product-card-img" style="aspect-ratio:4/5">
+            <img alt="Tủ Trang Trí Gỗ Sồi"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6dAuS_lTJhpDvt-Z9A2rw3PJ0S7LnWH-k0AJ_yYajZ2E4g9TKG8dWE-A1i9TZiTH97ENF_QOmJRb36yd2DS8_J54BTBIscQOfnhL5CzMnYLVKzvK0MBqlYkDKrmxgI2ZxCv0qw82rv5A0ZJS5V2orKbEp8U2-dWVThKTakj_3pYdkiMP_os6l4TKpgDM2sET4xiY7RACoDRk6o2pbFBxS9fMHm0hSvrIEU9cS2qluNjUL0B7FbM8Cee44jFJAT1AglFw-Zoro7z4"/>
+          </div>
+          <div class="product-card-body flex flex-col">
+            <div class="product-card-tag">Thiết Kế Riêng</div>
+            <h2 class="product-card-title">Tủ Trang Trí Gỗ Sồi</h2>
+            <p class="product-card-price" style="font-style:italic;opacity:0.8">Liên hệ báo giá</p>
+            <div class="product-card-actions mt-auto">
+              <button class="btn-card-detail" onclick="window.location.href='chi-tiet.html'">Xem chi tiết</button>
+              <button class="btn-card-contact" onclick="window.location.href='lien-he.html'">Liên hệ</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Highlight Section: Craftsmanship -->
+<section class="py-24 bg-surface-container-low">
+  <div class="container">
+    <h2 class="text-4xl font-bold text-center text-primary mb-14 font-headline reveal">Gia công tại xưởng – Chất lượng kiểm soát từ A–Z</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10 text-center">
+      <div class="flex flex-col items-center reveal reveal-delay-1">
+        <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center text-primary mb-5">
+          <span class="material-symbols-outlined text-3xl" style="font-variation-settings:'FILL' 1">forest</span>
+        </div>
+        <h4 class="font-headline text-lg font-bold mb-2 text-primary">Gỗ nhập khẩu đạt chuẩn FAS</h4>
+        <p class="text-on-surface-variant text-sm leading-relaxed">Nguồn gỗ đạt chuẩn FAS, đảm bảo độ bền và vẻ đẹp tự nhiên trường tồn.</p>
+      </div>
+      <div class="flex flex-col items-center reveal reveal-delay-2">
+        <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center text-primary mb-5">
+          <span class="material-symbols-outlined text-3xl" style="font-variation-settings:'FILL' 1">handyman</span>
+        </div>
+        <h4 class="font-headline text-lg font-bold mb-2 text-primary">Thợ lành nghề 20+ năm</h4>
+        <p class="text-on-surface-variant text-sm leading-relaxed">Đội ngũ nghệ nhân mộc hơn 20 năm kinh nghiệm, chăm chút từng đường nét.</p>
+      </div>
+      <div class="flex flex-col items-center reveal reveal-delay-3">
+        <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center text-primary mb-5">
+          <span class="material-symbols-outlined text-3xl" style="font-variation-settings:'FILL' 1">verified</span>
+        </div>
+        <h4 class="font-headline text-lg font-bold mb-2 text-primary">Kiểm tra chất lượng nghiêm ngặt</h4>
+        <p class="text-on-surface-variant text-sm leading-relaxed">Quy trình KCS nghiêm ngặt trước khi bàn giao tới tay khách hàng.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="py-20 bg-surface">
+  <div class="container">
+    <div class="bg-primary rounded-2xl p-12 text-center text-white relative overflow-hidden reveal">
+      <div class="absolute -right-20 -top-20 w-80 h-80 bg-secondary rounded-full blur-3xl opacity-20 pointer-events-none"></div>
+      <div class="relative z-10">
+        <h2 class="text-3xl md:text-4xl font-bold mb-5 font-headline">Bạn đang tìm bàn ghế phù hợp?</h2>
+        <p class="text-white/80 mb-8 max-w-xl mx-auto">Chúng tôi hỗ trợ đo đạc thực tế và tư vấn phong cách nội thất hoàn toàn miễn phí.</p>
+        <a href="lien-he.html" class="btn-secondary inline-flex font-bold text-base px-10 py-4 hover:scale-105 transition-transform">
+          Nhận tư vấn miễn phí
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="main-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <h3>Xưởng Gỗ Long Anh</h3>
+      <p>Nội thất gỗ tự nhiên cao cấp – Gia công tại xưởng, bảo hành 5 năm.</p>
+      <div class="footer-socials mt-4">
+        <a href="https://web.facebook.com/xuonggoolonganh/" target="_blank" rel="noopener" aria-label="Facebook"><span class="material-symbols-outlined text-sm">public</span></a>
+        <a href="#" aria-label="Zalo"><span style="font-size:13px;font-weight:700">Z</span></a>
+      </div>
+    </div>
+    <div class="footer-col"><h4>Sản phẩm</h4><ul><li><a href="sofa.html">Sofa gỗ</a></li><li><a href="ban-ghe.html">Bàn ăn</a></li><li><a href="ban-ghe.html">Kệ TV</a></li><li><a href="dich-vu.html">Theo yêu cầu</a></li></ul></div>
+    <div class="footer-col"><h4>Dịch vụ</h4><ul><li><a href="dich-vu.html">Tư vấn thiết kế</a></li><li><a href="dich-vu.html">Bảo hành & Bảo trì</a></li><li><a href="dich-vu.html">Vận chuyển & Lắp đặt</a></li></ul></div>
+    <div class="footer-col"><h4>Liên hệ</h4><div class="footer-contact-item"><span class="material-symbols-outlined">location_on</span>Giao Tác - Thư Lâm - Hà Nội</div><div class="footer-contact-item"><span class="material-symbols-outlined">call</span>0353 135 887 / 0971 212 706</div></div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2024 <strong>Xưởng Gỗ Long Anh</strong>. Đẳng cấp nghệ nhân Việt.</p>
+    <div class="flex gap-4 text-xs text-on-surface-variant">
+      <a href="index.html" class="hover:text-secondary transition-colors">Trang chủ</a>
+      <a href="lien-he.html" class="hover:text-secondary transition-colors">Liên hệ</a>
+    </div>
+  </div>
+</footer>
+
+<div class="fab-container">
+  <a href="tel:0353135887" class="fab-btn fab-phone" title="Gọi ngay"><span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">call</span></a>
+  <a href="https://zalo.me/0353135887" target="_blank" class="fab-btn fab-zalo" title="Zalo">Z</a>
+  <button class="fab-btn fab-top" id="fab-top"><span class="material-symbols-outlined">keyboard_arrow_up</span></button>
+</div>
+
+<script src="assets/shared.js"></script>
+<script>
+  document.getElementById('hamburger-btn').addEventListener('click', function() {
+    this.classList.toggle('open');
+    document.getElementById('mobile-nav').classList.toggle('open');
+  });
+
+  // Tab filter
+  const tabs = document.querySelectorAll('.filter-tab');
+  const items = document.querySelectorAll('.product-item');
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      const filter = tab.dataset.filter;
+      items.forEach(item => {
+        if (filter === 'all' || item.dataset.category === filter) {
+          item.style.display = '';
+          setTimeout(() => { item.style.opacity = '1'; item.style.transform = 'scale(1)'; }, 10);
+        } else {
+          item.style.opacity = '0';
+          item.style.transform = 'scale(0.95)';
+          setTimeout(() => { item.style.display = 'none'; }, 400);
+        }
+      });
+    });
+  });
+</script>
+</body>
+</html>
