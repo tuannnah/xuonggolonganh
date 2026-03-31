@@ -3,60 +3,65 @@
 ## 1. Project Overview
 **Brand Name:** Xưởng Gỗ Long Anh
 **Core Concept:** "Heritage Timber" - A luxury, artisan-focused digital experience for high-end wooden furniture.
-**Objective:** Create a unified, consistent, and premium web presence that showcases traditional craftsmanship with a modern aesthetic.
+**Objective:** Create a unified, consistent, and premium web presence that showcases traditional craftsmanship with a modern aesthetic, powered by a dynamic content management system.
 
 ## 2. Target Audience
 - Homeowners looking for high-quality, durable wooden furniture.
 - Interior designers seeking unique, artisan-made pieces.
 - Customers who value traditional Vietnamese wood craftsmanship and natural materials.
 
-## 3. Design System & Visual Identity (Heritage Timber)
-- **Primary Font:** Noto Serif (for a classic, prestigious feel).
-- **Secondary Font:** Be Vietnam Pro (for clean, readable body text).
-- **Color Palette:**
-    - **Background:** Soft Cream/Off-white (#FDF9F4).
-    - **Primary Brand Color:** Deep Wood Brown (#502905 / #6B3F1A).
-    - **Accent/Hover Color:** Heritage Gold/Amber (#875200).
-- **UI Elements:**
-    - Unified navigation and footer across all screens.
-    - Subtle background contrast for Nav and Footer to distinguish from main content.
-    - Responsive layout optimized for Desktop.
+## 3. Technology Stack & Architecture
+- **Framework:** Next.js (App Router) for Server-Side Rendering (SSR) and React Server Components.
+- **Styling:** Tailwind CSS v4 using modern `@theme` directive, integrated directly into `globals.css`.
+- **Database:** SQLite database managed via Prisma ORM.
+- **Backend/API:** Next.js Server Actions used to handle Create, Read, Update, Delete (CRUD) operations securely.
+- **Design System:**
+    - **Primary Font:** Noto Serif (for a classic, prestigious feel).
+    - **Secondary Font:** Be Vietnam Pro (for clean, readable body text).
+    - **Color Palette:**
+        - Background: Soft Cream/Off-white (#FDF9F4).
+        - Primary Brand Color: Deep Wood Brown (#502905 / #6B3F1A).
+        - Accent/Hover Color: Heritage Gold/Amber (#875200).
 
 ## 4. Key Pages & Features
 
 ### 4.1. Homepage (Trang Chủ)
-- **Hero Section:** Large, high-quality imagery of feature products (e.g., Sofa gỗ tự nhiên).
+- **Hero Section:** Large, high-quality imagery of feature products (e.g., Sofa gỗ tự nhiên) with statistics.
 - **Product Categories:** Visual tiles for Sofa, Bàn ăn, Kệ TV, etc.
-- **Commitments Section:** Highlighting natural materials (100% gỗ tự nhiên), in-house manufacturing, and long-term warranty.
+- **Dynamic Featured Products:** "Sản phẩm nổi bật" dynamically fetched from the SQLite database.
+- **Commitments Section:** Highlighting natural materials, in-house manufacturing, and long-term warranty.
 - **Customer Testimonials:** Social proof section.
 
-### 4.2. Product Listing Pages (Sofa & Bàn Ghế)
+### 4.2. Admin Dashboard (Trang Quản Trị)
+- **Product Management:** A secure `/admin` interface allowing the shop owner to:
+    - View all products currently in the database.
+    - Add new products (Image URL, Name, Price, Category, Tag, Description).
+    - Edit existing product details.
+    - Delete out-of-stock or discontinued products.
+- **Data Persistence:** Operations reflect instantly on the storefront via Next.js cache revalidation (`revalidatePath`).
+
+### 4.3. Product Listing Pages (Sofa & Bàn Ghế)
 - **Categorization:** Clear tabs/filters for different product types.
-- **Product Cards:** Unified grid layout featuring high-res images, pricing, and material details.
+- **Dynamic Product Cards:** Fetch category-specific products from the database.
 - **Call to Action:** "Xem chi tiết" (View Details) and "Liên hệ" (Contact) for each item.
 
-### 4.3. Product Detail Page (Chi Tiết Sản Phẩm)
-- **Image Gallery:** Large main image with a curated collection of detail shots showing grain, craftsmanship, and lifestyle context.
-- **Specifications:** Technical details table (dimensions, wood type, warranty).
-- **Craftsmanship Narrative:** Descriptions highlighting the "Heritage Craftsmanship" and organic finishes.
+### 4.4. Product Detail Page (Chi Tiết Sản Phẩm)
+- **Dynamic Routing:** Next.js dynamic routes (`/chi-tiet/[id]`) pulling specific details from the database.
+- **Image & Content:** Display specifications, price, tags, and product descriptions pulled directly from the Prisma model.
 
-### 4.4. Service Page (Dịch Vụ)
-- **Custom Design:** Promotion of custom-made furniture services.
+### 4.5. Service & Contact Pages (Dịch Vụ & Liên Hệ)
+- **Custom Design:** Promotion of custom-made furniture services with a contact lead form.
 - **Process Showcase:** Professionalism in manufacturing and finishing.
-- **After-sales:** Clear information on warranty and shipping.
-
-### 4.5. Contact Page (Liên Hệ)
-- **Lead Form:** Clean, simplified form for consultation requests.
-- **Map & Location:** Visual representation of the showroom/workshop location.
-- **Direct Contact:** Quick links for Phone/Zalo and Social Media.
+- **Direct Contact:** Sticky Floating Action Buttons for immediate Zalo or Phone routing.
 
 ## 5. Functional Requirements
-- **Unified Navigation:** Consistent logo placement (Left) and menu links (Right) across all pages.
-- **Unified Footer:** Simplified footer with core contact info and social icons, matching the Nav's background color.
-- **Interaction States:** Specific hover effects (#875200) for all interactive links and buttons.
-- **Image Handling:** High-fidelity images used to reflect the artisan quality of the products.
+- **Server Components:** Prioritize loading data on the server to optimize SEO and initial page load speeds.
+- **Unified Navigation/Footer:** Dedicated React components (`Navbar`, `Footer`) to ensure consistency.
+- **Responsive Layout:** Optimized for Desktop, Tablet, and Mobile devices natively via Tailwind queries.
+- **Database Seeding:** A dedicated `/api/seed` endpoint and `seed.js` script to bootstrap the website with default content automatically.
 
 ## 6. Future Roadmap
-- Integration of an e-commerce shopping cart and checkout.
+- Implementation of Admin authentication (e.g., NextAuth.js or simple session cookies) to secure the `/admin` route.
+- Integration of an e-commerce shopping cart and direct checkout processing.
+- Image upload functionality directly to a cloud provider (e.g., Cloudinary/AWS S3) from the admin dashboard instead of relying on URL inputs.
 - Detailed "Craftsmanship Journey" video sections.
-- Mobile-responsive optimization.
