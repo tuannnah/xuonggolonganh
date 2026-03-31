@@ -14,6 +14,7 @@ model Product {
   category    String   // vd: "sofa", "ban-ghe"
   tag         String?  // vd: "Gỗ Sồi Nga"
   imageUrl    String
+  images      String?  // Các ảnh phụ cách nhau bằng dấu phẩy
   description String?
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt

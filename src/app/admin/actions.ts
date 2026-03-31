@@ -9,6 +9,7 @@ export async function createProduct(formData: FormData) {
   const category = formData.get("category")?.toString() || ""
   const tag = formData.get("tag")?.toString()
   const imageUrl = formData.get("imageUrl")?.toString() || ""
+  const images = formData.get("images")?.toString() || null
   const description = formData.get("description")?.toString()
   
   if (!name || !price || !category || !imageUrl) {
@@ -22,8 +23,9 @@ export async function createProduct(formData: FormData) {
       category,
       tag,
       imageUrl,
+      images,
       description
-    }
+    } as any
   })
 
   revalidatePath("/")
@@ -45,6 +47,7 @@ export async function updateProduct(id: string, formData: FormData) {
   const category = formData.get("category")?.toString()
   const tag = formData.get("tag")?.toString()
   const imageUrl = formData.get("imageUrl")?.toString()
+  const images = formData.get("images")?.toString()
   const description = formData.get("description")?.toString()
 
   await prisma.product.update({
@@ -55,8 +58,9 @@ export async function updateProduct(id: string, formData: FormData) {
       category: category || undefined,
       tag,
       imageUrl: imageUrl || undefined,
+      images: images !== undefined ? images : undefined,
       description
-    }
+    } as any
   })
 
   revalidatePath("/")

@@ -43,6 +43,11 @@ export default async function AdminPage() {
               <input required name="imageUrl" type="url" placeholder="https://..." className="w-full border border-outline-variant rounded p-2" />
             </div>
             <div>
+              <label className="block text-sm font-medium mb-1">Các Link Ảnh Khác (tùy chọn)</label>
+              <textarea name="images" rows={3} placeholder="Mỗi đường link một dòng..." className="w-full border border-outline-variant rounded p-2"></textarea>
+              <p className="text-xs text-on-surface-variant mt-1">Dùng để làm bộ sưu tập ảnh trong trang chi tiết.</p>
+            </div>
+            <div>
               <label className="block text-sm font-medium mb-1">Mô tả chi tiết</label>
               <textarea name="description" rows={3} className="w-full border border-outline-variant rounded p-2"></textarea>
             </div>
